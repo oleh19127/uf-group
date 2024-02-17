@@ -1,15 +1,17 @@
 # Global options
-FROM node:18.19.0-alpine as base
+ARG NODE_VERSION=18.19.1
+FROM node:${NODE_VERSION}-alpine as base
+RUN corepack enable
 WORKDIR /app
 EXPOSE 4200
 # Global options
 
 # Develop options
-FROM base as dev
+FROM base AS dev
 RUN --mount=type=bind,source=package.json,target=package.json \
-  --mount=type=bind,source=package-lock.json,target=package-lock.json \
-  --mount=type=cache,target=/root/.npm \
-  npm ci --include=dev
+  --mount=type=bind,source=pnpm-lock.yaml,target=pnpm-lock.yaml \
+  --mount=type=cache,id=pnpm,target=/pnpm/store \
+  pnpm install
 COPY . .
-CMD [ "npm", "run", "dev" ]
+CMD ["pnpm", "dev"]
 # Develop options
