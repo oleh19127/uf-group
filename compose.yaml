@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  back-end:
-    container_name: elit-fasad-frontend
+  front-end:
+    container_name: elit-fasad
     build:
       context: .
       dockerfile: Dockerfile
