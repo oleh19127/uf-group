@@ -1,1 +1,1 @@
-pnpm lint-staged
+pnpm fix-all-code-style
