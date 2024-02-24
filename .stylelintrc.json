@@ -1,5 +1,8 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
   "plugins": ["stylelint-scss"],
-  "rules": {}
+  "rules": {
+    "scss/operator-no-newline-after": false,
+    "no-descending-specificity": null
+  }
 }
