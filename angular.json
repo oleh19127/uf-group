@@ -26,6 +26,7 @@
             "assets": ["src/assets"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap-grid.css",
+              "node_modules/hamburgers/dist/hamburgers.css",
               "src/styles.scss"
             ],
             "scripts": []
