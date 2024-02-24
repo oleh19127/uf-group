@@ -1,9 +1,17 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { CatalogueComponent } from './components/pages/catalogue/catalogue.component';
+import { GalleryComponent } from './components/pages/gallery/gallery.component';
+import { AboutUsComponent } from './components/pages/about-us/about-us.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', title: 'Elit-Fasad', component: HomeComponent },
+  { path: 'catalogue', title: 'Catalogue', component: CatalogueComponent },
+  { path: 'gallery', title: 'Gallery', component: GalleryComponent },
+  { path: 'about-us', title: 'About Us', component: AboutUsComponent },
+  { path: 'contact', title: 'Contact', component: ContactComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
+  { path: '**', title: 'Page Not Found', component: PageNotFoundComponent },
 ];

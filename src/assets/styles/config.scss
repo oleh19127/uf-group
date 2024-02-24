@@ -1,0 +1,33 @@
+@import 'reset';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 320px !important;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-size: 16px;
+  position: relative;
+  overflow-x: hidden;
+  background: #f2eddc;
+
+  &.lock {
+    overflow: hidden !important;
+  }
+
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f2eddc;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 15px;
+  }
+}

@@ -1,1 +1,109 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="header__container header-container">
+          <div class="header-container__logo header-container-logo">
+            <a
+              (click)="removeActiveClass()"
+              routerLink="/home"
+              class="header-container-logo__link"
+              ><img
+                ngSrc="../../../../assets/images/header/logo.svg"
+                priority="0"
+                alt="logo"
+                class="header-container-logo__img"
+                height="30"
+                width="202"
+            /></a>
+            <h2 class="header-container-logo__text">
+              Ваш дім - наше мистецтво
+            </h2>
+          </div>
+          <nav
+            [class.is-active]="isActive"
+            class="header-container__menu header-container-menu"
+          >
+            <ul class="header-container-menu__list header-container-menu-list">
+              <li
+                class="header-container-menu-list__item header-container-menu-list-item"
+              >
+                <a
+                  (click)="removeActiveClass()"
+                  class="header-container-menu-list-item__link"
+                  routerLink="/home"
+                  routerLinkActive="active-link"
+                  ariaCurrentWhenActive="page"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Головна</a
+                >
+              </li>
+              <li
+                class="header-container-menu-list__item header-container-menu-list-item"
+              >
+                <a
+                  (click)="removeActiveClass()"
+                  class="header-container-menu-list-item__link"
+                  routerLink="/catalogue"
+                  routerLinkActive="active-link"
+                  ariaCurrentWhenActive="page"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Каталог</a
+                >
+              </li>
+              <li
+                class="header-container-menu-list__item header-container-menu-list-item"
+              >
+                <a
+                  (click)="removeActiveClass()"
+                  class="header-container-menu-list-item__link"
+                  routerLink="/gallery"
+                  routerLinkActive="active-link"
+                  ariaCurrentWhenActive="page"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Галерея</a
+                >
+              </li>
+              <li
+                class="header-container-menu-list__item header-container-menu-list-item"
+              >
+                <a
+                  (click)="removeActiveClass()"
+                  class="header-container-menu-list-item__link"
+                  routerLink="/about-us"
+                  routerLinkActive="active-link"
+                  ariaCurrentWhenActive="page"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Про нас</a
+                >
+              </li>
+              <li
+                class="header-container-menu-list__item header-container-menu-list-item"
+              >
+                <a
+                  (click)="removeActiveClass()"
+                  class="header-container-menu-list-item__link"
+                  routerLink="/contact"
+                  routerLinkActive="active-link"
+                  ariaCurrentWhenActive="page"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <button
+            type="button"
+            class="hamburger hamburger--spring"
+            [class.is-active]="isActive"
+            (click)="toggleNav()"
+          >
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
