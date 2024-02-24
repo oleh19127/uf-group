@@ -1,0 +1,37 @@
+// ADAPTIVE-FONT
+$max-width: 1920;
+$max-width-container: 1200;
+
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+  $add-size: $startSize - $minSize;
+
+  @if $type == 1 {
+    // ONLY IF LESS CONTAINER
+    #{$property}: $startSize + px;
+
+    @media (max-width: #{$max-width-container + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$add-size} *
+          ((100vw - 320px) / #{$max-width-container - 320})
+      );
+    }
+  } @else if $type == 2 {
+    // ONLY IF MORE CONTAINER
+    #{$property}: $startSize + px;
+
+    @media (min-width: #{$max-width-container + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$add-size} *
+          ((100vw - 320px) / #{$max-width - 320})
+      );
+    }
+  } @else {
+    // ALWAYS
+    #{$property}: calc(
+      #{$minSize + px} + #{$add-size} * ((100vw - 320px) / #{$max-width - 320})
+    );
+  }
+}
+
+// @include adaptive-value('padding', 50, 10, 0);
+// @include adaptive-value('font-size', 30, 16, 0);
