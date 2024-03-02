@@ -2,6 +2,7 @@
 
 html,
 body {
+  position: relative;
   height: 100%;
   width: 100%;
   min-width: 320px !important;
@@ -30,4 +31,10 @@ body {
     background: #333;
     border-radius: 15px;
   }
+}
+
+.none {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
 }
