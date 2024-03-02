@@ -1,0 +1,158 @@
+@import '../../../../assets/styles/mixins/adaptive-font';
+
+.header {
+  position: relative;
+  z-index: 100;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media screen and (width <= 768px) {
+    height: 80px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2eddc;
+    z-index: 50;
+
+    @media screen and (width <= 992px) {
+      box-shadow: 0 0 11px 0 rgb(0 0 0 / 20%);
+    }
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .hamburger {
+    @media screen and (width >= 993px) {
+      display: none;
+    }
+
+    z-index: 51;
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background: #402e21;
+    }
+
+    .hamburger-inner {
+      top: 0;
+    }
+  }
+}
+
+.header-container-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 51;
+
+  // .header-container-logo__link
+
+  //  &__link {
+  //  }
+
+  // .header-container-logo__img
+
+  &__img {
+    width: 100%;
+    height: 28px;
+    margin-bottom: 5px;
+  }
+
+  // .header-container-logo__text
+
+  &__text {
+    @include adaptive-value('font-size', 20, 18, 0);
+  }
+}
+
+.header-container-menu {
+  z-index: 51;
+  display: block;
+
+  &.is-active {
+    right: 0;
+  }
+
+  @media screen and (width <= 992px) {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2eddc;
+    transition: all 0.4s ease-in-out;
+    margin-top: 0;
+    z-index: 49;
+    overflow-y: auto;
+    margin-right: 0;
+  }
+}
+
+.header-container-menu-list {
+  display: flex;
+
+  @media screen and (width <= 992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    height: 100%;
+  }
+}
+
+.header-container-menu-list-item {
+  // .header-container-menu-list-item__link
+  margin-left: 78px;
+
+  @media screen and (width <= 1200px) {
+    margin-left: 40px;
+  }
+
+  @media screen and (width <= 992px) {
+    padding: 30px 0;
+    margin-left: 0;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &__link {
+    position: relative;
+
+    @include adaptive-value('font-size', 21, 25, 0);
+
+    color: #402e21;
+
+    &::before {
+      position: absolute;
+      transition: all 0.2s ease;
+      bottom: -4px;
+      content: '';
+      height: 1.5px;
+      width: 0;
+      background: #402e21;
+    }
+
+    &.active-link {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
