@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { IntroComponent } from '../../blocks/intro/intro.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [IntroComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
