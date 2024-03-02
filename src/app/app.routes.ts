@@ -7,11 +7,41 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
 import { ContactComponent } from './components/pages/contact/contact.component';
 
 export const routes: Routes = [
-  { path: 'home', title: 'Elit-Fasad', component: HomeComponent },
-  { path: 'catalogue', title: 'Catalogue', component: CatalogueComponent },
-  { path: 'gallery', title: 'Gallery', component: GalleryComponent },
-  { path: 'about-us', title: 'About Us', component: AboutUsComponent },
-  { path: 'contact', title: 'Contact', component: ContactComponent },
+  {
+    path: 'home',
+    title: 'Elit-Fasad',
+    component: HomeComponent,
+    data: { animation: 'HomePage' },
+  },
+  {
+    path: 'catalogue',
+    title: 'Catalogue',
+    component: CatalogueComponent,
+    data: { animation: 'CataloguePage' },
+  },
+  {
+    path: 'gallery',
+    title: 'Gallery',
+    component: GalleryComponent,
+    data: { animation: 'GalleryPage' },
+  },
+  {
+    path: 'about-us',
+    title: 'About Us',
+    component: AboutUsComponent,
+    data: { animation: 'AboutPage' },
+  },
+  {
+    path: 'contact',
+    title: 'Contact',
+    component: ContactComponent,
+    data: { animation: 'ContactPage' },
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', title: 'Page Not Found', component: PageNotFoundComponent },
+  {
+    path: '**',
+    title: 'Page Not Found',
+    component: PageNotFoundComponent,
+    data: { animation: 'PageNotFoundPage' },
+  },
 ];
