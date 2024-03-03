@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
         this.renderer.removeClass(document.body, this.bodyLockClass);
       }
       this.loading = false;
-    }, 4000);
+    }, 300);
   }
   getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
