@@ -69,13 +69,16 @@
   &__img {
     width: 100%;
     height: 28px;
-    margin-bottom: 5px;
+    margin: 4px 0 5px;
   }
 
   // .header-container-logo__text
 
   &__text {
     @include adaptive-value('font-size', 20, 18, 0);
+
+    color: #593a28;
+    font-weight: 600;
   }
 }
 
@@ -137,16 +140,18 @@
 
     @include adaptive-value('font-size', 21, 25, 0);
 
-    color: #402e21;
+    font-weight: 700;
+    color: #593a28;
 
     &::before {
       position: absolute;
       transition: all 0.2s ease;
       bottom: -4px;
       content: '';
-      height: 1.5px;
+      height: 2px;
       width: 0;
-      background: #402e21;
+      background: #593a28;
+      border-radius: 20px;
     }
 
     &.active-link {
