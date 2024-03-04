@@ -13,8 +13,21 @@
   span {
     margin-right: 15px;
     color: #402e21;
+    font-weight: 600;
 
     @include adaptive-value('font-size', 23, 17, 0);
+  }
+}
+
+.global-block-title {
+  color: #0d0000;
+  font-weight: 700;
+  margin-bottom: 25px;
+
+  @include adaptive-value('font-size', 48, 30, 0);
+
+  @media screen and (width >= 992px) {
+    margin-bottom: 50px;
   }
 }
 
