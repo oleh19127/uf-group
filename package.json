@@ -37,6 +37,7 @@
     "@angular/platform-browser": "^17.2.3",
     "@angular/platform-browser-dynamic": "^17.2.3",
     "@angular/router": "^17.2.3",
+    "@angular/youtube-player": "^17.2.1",
     "bootstrap": "^5.3.3",
     "hamburgers": "^1.2.1",
     "husky": "^9.0.11",
@@ -55,8 +56,8 @@
     "@angular/cli": "^17.2.2",
     "@angular/compiler-cli": "^17.2.3",
     "@types/jasmine": "~5.1.4",
-    "@typescript-eslint/eslint-plugin": "7.0.2",
-    "@typescript-eslint/parser": "7.0.2",
+    "@typescript-eslint/eslint-plugin": "7.1.1",
+    "@typescript-eslint/parser": "7.1.1",
     "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -73,7 +74,7 @@
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
-    "stylelint-scss": "^6.2.0",
+    "stylelint-scss": "^6.2.1",
     "typescript": "~5.3.3"
   }
 }
