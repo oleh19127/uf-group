@@ -24,10 +24,10 @@ export class OurNewsComponent implements OnInit {
         prevEl: '.swiper-button-prev',
       },
       loop: true,
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: true,
-      // },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
       on: {
         init() {
           // ...
