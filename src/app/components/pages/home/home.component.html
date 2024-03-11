@@ -1,5 +1,25 @@
 <app-intro></app-intro>
-<app-about></app-about>
-<app-services></app-services>
-<app-our-news></app-our-news>
-<app-video></app-video>
+
+@defer (on immediate) {
+  <app-about></app-about>
+} @placeholder {
+  <div>About section</div>
+}
+
+@defer (on immediate) {
+  <app-services></app-services>
+} @placeholder {
+  <div>Services section</div>
+}
+
+@defer (on immediate) {
+  <app-our-news></app-our-news>
+} @placeholder {
+  <div>Our news section</div>
+}
+
+@defer (on immediate) {
+  <app-video></app-video>
+} @placeholder {
+  <div>Video section</div>
+}
