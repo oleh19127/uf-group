@@ -1,6 +1,13 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Inject,
+  OnInit,
+} from '@angular/core';
+import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SwiperContainer } from 'swiper/swiper-element';
+import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-our-news',
@@ -11,12 +18,14 @@ import { RouterLink } from '@angular/router';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class OurNewsComponent implements OnInit {
-  constructor() {}
+  constructor(@Inject(DOCUMENT) private document: Document) {}
   ngOnInit() {
-    // swiper element
-    const swiperEl = document.querySelector('swiper-container');
-
-    // swiper parameters
+    this.initSlider();
+  }
+  initSlider() {
+    const swiperEl = this.document.querySelector(
+      'swiper-container',
+    ) as SwiperContainer;
     const swiperParams = {
       slidesPerView: 1,
       navigation: {
@@ -33,15 +42,8 @@ export class OurNewsComponent implements OnInit {
           // ...
         },
       },
-    };
-
-    // now we need to assign all parameters to Swiper element
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
+    } as SwiperOptions;
     Object.assign(swiperEl, swiperParams);
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     swiperEl.initialize();
   }
 }

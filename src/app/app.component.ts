@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import {
   ChildrenOutletContexts,
   RouterLink,
@@ -6,7 +6,7 @@ import {
 } from '@angular/router';
 import { HeaderComponent } from './components/blocks/header/header.component';
 import { fade } from './animations/fade';
-import { NgClass } from '@angular/common';
+import { DOCUMENT, NgClass } from '@angular/common';
 import { PreloaderComponent } from './components/blocks/preloader/preloader.component';
 
 @Component({
@@ -29,14 +29,15 @@ export class AppComponent implements OnInit {
   constructor(
     private contexts: ChildrenOutletContexts,
     private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
   ) {}
 
   ngOnInit() {
-    const hasClass = document.body.classList.contains(this.bodyLockClass);
+    const hasClass = this.document.body.classList.contains(this.bodyLockClass);
 
     setTimeout(() => {
       if (hasClass) {
-        this.renderer.removeClass(document.body, this.bodyLockClass);
+        this.renderer.removeClass(this.document.body, this.bodyLockClass);
       }
       this.loading = false;
     }, 300);
