@@ -1,11 +1,13 @@
 <div class="intro">
-  <img
+  <app-progressive-image
     class="bg-intro-img"
-    ngSrc="assets/images/intro/intro-background-1920.webp"
-    alt="bg-intro"
-    priority
-    fill
-  />
+    imageUrl="assets/images/intro/intro-background.webp"
+    imageUrlPlaceholder="assets/images/intro/intro-background-placeholder.webp"
+    imageAlt="bg-intro"
+    imageHeight="800"
+    imageWidth="1728"
+  >
+  </app-progressive-image>
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
@@ -20,6 +22,7 @@
             alt="global-button-arrow"
             height="16"
             width="32"
+            priority
           />
         </a>
       </div>

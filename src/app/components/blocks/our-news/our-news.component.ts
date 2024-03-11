@@ -5,14 +5,14 @@ import {
   OnInit,
 } from '@angular/core';
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { SwiperContainer } from 'swiper/swiper-element';
 import { SwiperOptions } from 'swiper/types';
+import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 
 @Component({
   selector: 'app-our-news',
   standalone: true,
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [NgOptimizedImage, ProgressiveImageComponent],
   templateUrl: './our-news.component.html',
   styleUrl: './our-news.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
