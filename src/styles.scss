@@ -23,6 +23,11 @@
   color: #0d0000;
   font-weight: 700;
   margin-bottom: 25px;
+  text-align: center;
+
+  @media screen and (width >= 767px) {
+    text-align: left;
+  }
 
   @include adaptive-value('font-size', 48, 30, 0);
 

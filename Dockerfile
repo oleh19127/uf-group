@@ -13,5 +13,5 @@ RUN --mount=type=bind,source=package.json,target=package.json \
   --mount=type=cache,id=pnpm,target=/pnpm/store \
   pnpm install
 COPY . .
-CMD ["pnpm", "dev"]
+CMD ["pnpm", "start"]
 # Develop options

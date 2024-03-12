@@ -4,14 +4,6 @@
   background: white;
   overflow-x: hidden;
 
-  &__title {
-    text-align: center;
-
-    @media screen and (width >= 767px) {
-      text-align: left;
-    }
-  }
-
   .container {
     .col-12 {
       position: relative;
