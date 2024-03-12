@@ -2,14 +2,25 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="video__container">
-          <youtube-player
-            class="youtube-player"
-            videoId="vTyxwGoDj9s"
-            placeholderImageQuality="high"
-          />
-        </div>
+        <h2 class="video__title global-block-title">Відео</h2>
       </div>
     </div>
   </div>
+  @defer (on immediate) {
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="video__container">
+            <youtube-player
+              class="youtube-player"
+              videoId="vTyxwGoDj9s"
+              placeholderImageQuality="high"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  } @placeholder {
+    <div>YouTube video</div>
+  }
 </div>
