@@ -3,12 +3,24 @@
   class="placeholder"
   [ngClass]="{ placeholder: true, 'placeholder-loaded': isLoaded }"
 >
-  <img
-    [ngClass]="{ image: true, 'image-loaded': isLoaded }"
-    [ngSrc]="imageUrl"
-    [alt]="imageAlt"
-    [height]="imageHeight"
-    [width]="imageWidth"
-    (load)="onImageLoad()"
-  />
+  @if (imageFill) {
+    <img
+      [ngClass]="{ image: true, 'image-loaded': isLoaded }"
+      [ngSrc]="imageUrl"
+      [alt]="imageAlt"
+      [fill]="imageFill"
+      (load)="onImageLoad()"
+      [priority]="imagePriority"
+    />
+  } @else {
+    <img
+      [ngClass]="{ image: true, 'image-loaded': isLoaded }"
+      [ngSrc]="imageUrl"
+      [alt]="imageAlt"
+      [height]="imageHeight"
+      [width]="imageWidth"
+      (load)="onImageLoad()"
+      [priority]="imagePriority"
+    />
+  }
 </div>
