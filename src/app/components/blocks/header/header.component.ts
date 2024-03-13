@@ -1,6 +1,6 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, HostListener, Inject, Renderer2 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgOptimizedImage } from '@angular/common';
+import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -12,13 +12,43 @@ import { NgOptimizedImage } from '@angular/common';
 export class HeaderComponent {
   bodyClass = 'lock';
   isActive = false;
-  constructor(private renderer: Renderer2) {}
+  minHeader = 'min-header';
+  constructor(
+    private render: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
+  ) {}
+
+  header = this.document.querySelector('.header');
+
+  @HostListener('window:scroll')
+  OnWindowScroll() {
+    if (this.header) {
+      if (
+        this.document.body.scrollTop >= 30 ||
+        this.document.documentElement.scrollTop >= 30
+      ) {
+        this.render.addClass(this.header, this.minHeader);
+      } else {
+        this.render.removeClass(this.header, this.minHeader);
+      }
+    }
+  }
+
+  // getElementHeightByClass(className: string) {
+  //   const element = this.elementRef.nativeElement.querySelector(className);
+  //   if (element) {
+  //     return element.offsetHeight;
+  //     // console.log('Element height:', elementHeight);
+  //   } else {
+  //     console.error('Element with class', className, 'not found.');
+  //   }
+  // }
   toggleBodyClass() {
-    const hasClass = document.body.classList.contains(this.bodyClass);
+    const hasClass = this.document.body.classList.contains(this.bodyClass);
     if (hasClass) {
-      this.renderer.removeClass(document.body, this.bodyClass);
+      this.render.removeClass(this.document.body, this.bodyClass);
     } else {
-      this.renderer.addClass(document.body, this.bodyClass);
+      this.render.addClass(this.document.body, this.bodyClass);
     }
   }
 
@@ -28,7 +58,16 @@ export class HeaderComponent {
   }
 
   removeActiveClass() {
+    this.goToTop();
     this.isActive = false;
-    this.renderer.removeClass(document.body, this.bodyClass);
+    this.render.removeClass(this.document.body, this.bodyClass);
+  }
+
+  goToTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 }

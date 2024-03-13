@@ -1,13 +1,15 @@
-<app-intro></app-intro>
+<div class="home-page page">
+  <app-intro></app-intro>
 
-<app-about></app-about>
+  <app-about></app-about>
 
-<app-services></app-services>
+  <app-services></app-services>
 
-@defer (on immediate) {
-  <app-our-news></app-our-news>
-} @placeholder {
-  <div>Our News Carousel</div>
-}
+  @defer (on immediate) {
+    <app-our-news></app-our-news>
+  } @placeholder {
+    <div>Our News Carousel</div>
+  }
 
-<app-video></app-video>
+  <app-video></app-video>
+</div>
