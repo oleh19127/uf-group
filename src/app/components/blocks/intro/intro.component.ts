@@ -10,4 +10,12 @@ import { RouterLink } from '@angular/router';
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss',
 })
-export class IntroComponent {}
+export class IntroComponent {
+  goToTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
+}
