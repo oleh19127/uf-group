@@ -42,3 +42,11 @@ body {
   visibility: hidden;
   transition: all 0.3s linear;
 }
+
+.page {
+  padding-top: 90px;
+
+  @media screen and (width <= 768px) {
+    padding-top: 80px;
+  }
+}
