@@ -27,7 +27,7 @@ export const routes: Routes = [
   },
   {
     path: 'about-us',
-    title: 'About Us',
+    title: 'About-Us',
     component: AboutUsComponent,
     data: { animation: 'AboutPage' },
   },
@@ -40,7 +40,7 @@ export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: '**',
-    title: 'Page Not Found',
+    title: 'Page-Not-Found',
     component: PageNotFoundComponent,
     data: { animation: 'PageNotFoundPage' },
   },
