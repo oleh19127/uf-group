@@ -33,16 +33,6 @@ export class HeaderComponent {
       }
     }
   }
-
-  // getElementHeightByClass(className: string) {
-  //   const element = this.elementRef.nativeElement.querySelector(className);
-  //   if (element) {
-  //     return element.offsetHeight;
-  //     // console.log('Element height:', elementHeight);
-  //   } else {
-  //     console.error('Element with class', className, 'not found.');
-  //   }
-  // }
   toggleBodyClass() {
     const hasClass = this.document.body.classList.contains(this.bodyClass);
     if (hasClass) {
@@ -67,7 +57,7 @@ export class HeaderComponent {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: 'instant',
     });
   }
 }

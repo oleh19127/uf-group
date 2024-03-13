@@ -4,9 +4,6 @@ import { AppComponent } from './app/app.component';
 import { register as registerSwiperElement } from 'swiper/element/bundle';
 
 registerSwiperElement();
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err))
-  .then(() => {
-    document.querySelector('body')?.classList.remove('lock');
-    document.querySelector('.loading-screen')?.classList.add('none');
-  });
+bootstrapApplication(AppComponent, appConfig).catch((err) =>
+  console.error(err),
+);
