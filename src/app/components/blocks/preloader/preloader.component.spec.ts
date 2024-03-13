@@ -8,10 +8,9 @@ describe('PreloaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PreloaderComponent]
-    })
-    .compileComponents();
-    
+      imports: [PreloaderComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(PreloaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
