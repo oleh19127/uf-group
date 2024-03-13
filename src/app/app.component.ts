@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   ChildrenOutletContexts,
   RouterLink,
@@ -6,42 +6,19 @@ import {
 } from '@angular/router';
 import { HeaderComponent } from './components/blocks/header/header.component';
 import { fade } from './animations/fade';
-import { DOCUMENT, NgClass } from '@angular/common';
-import { PreloaderComponent } from './components/blocks/preloader/preloader.component';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    RouterLink,
-    PreloaderComponent,
-    NgClass,
-  ],
+  imports: [RouterOutlet, HeaderComponent, RouterLink, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [fade],
 })
-export class AppComponent implements OnInit {
-  bodyLockClass = 'lock';
-  loading = true;
-  constructor(
-    private contexts: ChildrenOutletContexts,
-    private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document,
-  ) {}
+export class AppComponent {
+  constructor(private contexts: ChildrenOutletContexts) {}
 
-  ngOnInit() {
-    const hasClass = this.document.body.classList.contains(this.bodyLockClass);
-
-    setTimeout(() => {
-      if (hasClass) {
-        this.renderer.removeClass(this.document.body, this.bodyLockClass);
-      }
-      this.loading = false;
-    }, 300);
-  }
   getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
       'animation'
