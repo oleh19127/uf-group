@@ -9,6 +9,14 @@
   align-items: center;
   transition: all 0.4s linear;
 
+  .container {
+    height: 100%;
+
+    .row {
+      height: 100%;
+    }
+  }
+
   &.min-header {
     height: 80px;
     box-shadow: 0 0 11px 0 rgb(0 0 0 / 20%);
@@ -42,8 +50,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 
   .hamburger {
+    padding: 0;
+    margin-top: 11px;
+
     @media screen and (width >= 993px) {
       display: none;
     }
@@ -64,15 +76,20 @@
 
 .header-container-logo {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
   z-index: 51;
 
   // .header-container-logo__link
 
-  //  &__link {
-  //  }
+  &__link {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   // .header-container-logo__img
 
@@ -94,6 +111,7 @@
 .header-container-menu {
   z-index: 51;
   display: block;
+  height: 100%;
 
   &.is-active {
     right: 0;
@@ -116,6 +134,8 @@
 
 .header-container-menu-list {
   display: flex;
+  align-items: center;
+  height: 100%;
 
   @media screen and (width <= 992px) {
     display: flex;
