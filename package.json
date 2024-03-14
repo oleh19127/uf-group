@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "lint": "ng lint --fix",
     "style-lint": "stylelint \"**/*.scss\" --fix",
-    "fix-all-code-style": "concurrently \"pnpm run format\" \"pnpm run lint\" \"pnpm run style-lint\"",
+    "fix-all-code-style": "concurrently \"npm run format\" \"npm run lint\" \"npm run style-lint\"",
     "prepare": "husky",
     "serve:ssr:front-end": "node dist/front-end/server/server.mjs"
   },
@@ -82,6 +82,5 @@
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-scss": "^6.2.1",
     "typescript": "~5.3.3"
-  },
-  "packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
+  }
 }

@@ -1,7 +1,8 @@
 # Global options
 ARG NODE_VERSION=18.19.1
 FROM node:${NODE_VERSION}-alpine as base
-RUN corepack enable
+RUN npm update -g
+RUN npm i -g @angular/cli
 WORKDIR /app
 EXPOSE 4200
 # Global options
@@ -9,9 +10,9 @@ EXPOSE 4200
 # Develop options
 FROM base AS dev
 RUN --mount=type=bind,source=package.json,target=package.json \
-  --mount=type=bind,source=pnpm-lock.yaml,target=pnpm-lock.yaml \
-  --mount=type=cache,id=pnpm,target=/pnpm/store \
-  pnpm install
+  --mount=type=bind,source=package-lock.json,target=package-lock.json \
+  --mount=type=cache,target=/root/.npm \
+  npm ci
 COPY . .
-CMD ["pnpm", "start"]
+CMD ["ng", "serve", "--host", "0.0.0.0"]
 # Develop options
