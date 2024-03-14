@@ -1,1 +1,1 @@
-pnpm fix-all-code-style
+npm run fix-all-code-style
