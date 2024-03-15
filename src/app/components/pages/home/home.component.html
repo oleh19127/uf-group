@@ -5,7 +5,11 @@
 
   <app-services></app-services>
 
-  <app-our-news></app-our-news>
+  @defer (on immediate) {
+    <app-our-news></app-our-news>
+  } @placeholder {
+    <h3>Our News block</h3>
+  }
 
   <app-video></app-video>
 </div>
