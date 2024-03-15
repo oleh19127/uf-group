@@ -4,7 +4,6 @@ import {
   RouterLink,
   RouterOutlet,
 } from '@angular/router';
-import { HeaderComponent } from './components/blocks/header/header.component';
 import { fade } from './animations/fade';
 import { PreloaderComponent } from './components/blocks/preloader/preloader.component';
 import { DOCUMENT, NgClass } from '@angular/common';
@@ -12,13 +11,7 @@ import { DOCUMENT, NgClass } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    RouterLink,
-    PreloaderComponent,
-    NgClass,
-  ],
+  imports: [RouterOutlet, RouterLink, PreloaderComponent, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [fade],
