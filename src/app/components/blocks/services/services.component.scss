@@ -1,6 +1,64 @@
 .services {
   background: white;
-  overflow: hidden;
+
+  .border-radius {
+    overflow: hidden;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+      .text-container {
+        opacity: 0.8;
+        visibility: visible;
+      }
+    }
+
+    .text-container {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #3c3c3c;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s linear;
+
+      p {
+        position: absolute;
+        top: 65%;
+        left: 0;
+        transform: translate(0, -65%);
+        width: 100%;
+        text-align: center;
+        color: #bfbc8a;
+        font-size: 35px;
+
+        @media screen and (width >= 576px) {
+          font-size: 20px;
+        }
+
+        @media screen and (width >= 768px) {
+          font-size: 17px;
+        }
+
+        @media screen and (width >= 992px) {
+          font-size: 23px;
+        }
+
+        @media screen and (width >= 1200px) {
+          font-size: 27px;
+        }
+
+        @media screen and (width >= 1400px) {
+          font-size: 32px;
+        }
+      }
+    }
+  }
 
   .services-left-side {
     .row {
@@ -29,15 +87,15 @@
       }
 
       @media screen and (width >= 992px) {
-        max-height: 313px !important;
+        max-height: 312.5px !important;
       }
 
       @media screen and (width >= 1200px) {
-        max-height: 377px !important;
+        max-height: 376.5px !important;
       }
 
       @media screen and (width >= 1400px) {
-        max-height: 439px !important;
+        max-height: 440.5px !important;
       }
 
       &:last-child {
