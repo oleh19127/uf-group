@@ -6,66 +6,70 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="swiper-button-prev">
-          <img
-            ngSrc="assets/images/slider/left-arrow.svg"
-            alt="left-arrow"
-            height="16"
-            width="32"
-          />
+  @defer (on immediate) {
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="swiper-button-prev">
+            <img
+              ngSrc="assets/images/slider/left-arrow.svg"
+              alt="left-arrow"
+              height="16"
+              width="32"
+            />
+          </div>
+          <div class="swiper-button-next">
+            <img
+              ngSrc="assets/images/slider/right-arrow.svg"
+              alt="right-arrow"
+              height="16"
+              width="32"
+            />
+          </div>
+          <swiper-container class="swiper-container" init="false">
+            <swiper-slide class="swiper-slide">
+              <app-progressive-image
+                imageUrl="assets/images/our-news/news-slide.webp"
+                imageUrlPlaceholder="assets/images/our-news/news-slide-placeholder.webp"
+                imageAlt="our-news-slide-image"
+                imageHeight="1000"
+                imageWidth="1628"
+                imagePriority="false"
+                imageFill="false"
+              ></app-progressive-image>
+              <p class="swiper-slide__text">
+                <span
+                  >В Elit-Fasad з’явився великий вибір декорів стільниць
+                  PFLEIDERER.
+                </span>
+                <span>Формат стільниці 4100*600 та 4100*1200</span>
+                <span>Товщина 38мм </span>
+              </p>
+            </swiper-slide>
+            <swiper-slide class="swiper-slide">
+              <app-progressive-image
+                imageUrl="assets/images/our-news/news-slide.webp"
+                imageUrlPlaceholder="assets/images/our-news/news-slide-placeholder.webp"
+                imageAlt="our-news-slide-image"
+                imageHeight="1000"
+                imageWidth="1628"
+                imagePriority="false"
+                imageFill="false"
+              ></app-progressive-image>
+              <p class="swiper-slide__text">
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolorem?
+                </span>
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span>Lorem ipsum dolor. </span>
+              </p>
+            </swiper-slide>
+          </swiper-container>
         </div>
-        <div class="swiper-button-next">
-          <img
-            ngSrc="assets/images/slider/right-arrow.svg"
-            alt="right-arrow"
-            height="16"
-            width="32"
-          />
-        </div>
-        <swiper-container class="swiper-container" init="false">
-          <swiper-slide class="swiper-slide">
-            <app-progressive-image
-              imageUrl="assets/images/our-news/news-slide.webp"
-              imageUrlPlaceholder="assets/images/our-news/news-slide-placeholder.webp"
-              imageAlt="our-news-slide-image"
-              imageHeight="1000"
-              imageWidth="1628"
-              imagePriority="false"
-              imageFill="false"
-            ></app-progressive-image>
-            <p class="swiper-slide__text">
-              <span
-                >В Elit-Fasad з’явився великий вибір декорів стільниць
-                PFLEIDERER.
-              </span>
-              <span>Формат стільниці 4100*600 та 4100*1200</span>
-              <span>Товщина 38мм </span>
-            </p>
-          </swiper-slide>
-          <swiper-slide class="swiper-slide">
-            <app-progressive-image
-              imageUrl="assets/images/our-news/news-slide.webp"
-              imageUrlPlaceholder="assets/images/our-news/news-slide-placeholder.webp"
-              imageAlt="our-news-slide-image"
-              imageHeight="1000"
-              imageWidth="1628"
-              imagePriority="false"
-              imageFill="false"
-            ></app-progressive-image>
-            <p class="swiper-slide__text">
-              <span
-                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorem?
-              </span>
-              <span>Lorem ipsum dolor sit amet.</span>
-              <span>Lorem ipsum dolor. </span>
-            </p>
-          </swiper-slide>
-        </swiper-container>
       </div>
     </div>
-  </div>
+  } @placeholder {
+    <h2 class="our-news__title global-block-title">Наші Новинки</h2>
+  }
 </div>
