@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../blocks/header/header.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
-  imports: [HeaderComponent],
+  imports: [],
 })
 export class ContactComponent {}
