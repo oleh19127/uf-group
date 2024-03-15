@@ -1,47 +1,59 @@
 import { Routes } from '@angular/router';
-import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
-import { HomeComponent } from './components/pages/home/home.component';
-import { CatalogueComponent } from './components/pages/catalogue/catalogue.component';
-import { GalleryComponent } from './components/pages/gallery/gallery.component';
-import { AboutUsComponent } from './components/pages/about-us/about-us.component';
-import { ContactComponent } from './components/pages/contact/contact.component';
 
 export const routes: Routes = [
   {
     path: 'home',
     title: 'Elit-Fasad',
-    component: HomeComponent,
+    loadComponent: () =>
+      import('./components/pages/home/home.component').then(
+        (m) => m.HomeComponent,
+      ),
     data: { animation: 'HomePage' },
   },
   {
     path: 'catalogue',
     title: 'Catalogue',
-    component: CatalogueComponent,
+    loadComponent: () =>
+      import('./components/pages/catalogue/catalogue.component').then(
+        (m) => m.CatalogueComponent,
+      ),
     data: { animation: 'CataloguePage' },
   },
   {
     path: 'gallery',
     title: 'Gallery',
-    component: GalleryComponent,
+    loadComponent: () =>
+      import('./components/pages/gallery/gallery.component').then(
+        (m) => m.GalleryComponent,
+      ),
     data: { animation: 'GalleryPage' },
   },
   {
     path: 'about-us',
     title: 'About-Us',
-    component: AboutUsComponent,
+    loadComponent: () =>
+      import('./components/pages/about-us/about-us.component').then(
+        (m) => m.AboutUsComponent,
+      ),
     data: { animation: 'AboutPage' },
   },
   {
     path: 'contact',
     title: 'Contact',
-    component: ContactComponent,
+    loadComponent: () =>
+      import('./components/pages/contact/contact.component').then(
+        (m) => m.ContactComponent,
+      ),
     data: { animation: 'ContactPage' },
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: '**',
     title: 'Page-Not-Found',
-    component: PageNotFoundComponent,
+    loadComponent: () =>
+      import('./components/pages/page-not-found/page-not-found.component').then(
+        (m) => m.PageNotFoundComponent,
+      ),
     data: { animation: 'PageNotFoundPage' },
   },
 ];
