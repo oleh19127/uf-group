@@ -1,0 +1,254 @@
+@import '../../../../assets/styles/mixins/adaptive-font';
+
+.contact-us {
+  background: #fff;
+
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+
+    .row {
+      padding: 0;
+      margin: 0;
+
+      .col-12 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  &__bg {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+
+    @media screen and (width >= 576px) {
+      height: 800px;
+    }
+
+    @media screen and (width >= 768px) {
+      height: 850px;
+    }
+
+    @media screen and (width >= 992px) {
+      height: 950px;
+    }
+
+    @media screen and (width >= 1200px) {
+      height: 900px;
+    }
+
+    @media screen and (width >= 1400px) {
+      height: 774px;
+    }
+
+    app-progressive-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.contact-us-form {
+  position: relative;
+  margin: 0 15px;
+  z-index: 10;
+  background: #d9d2b0;
+  border-radius: 25px;
+  box-shadow: 0 0 11px 0 rgb(0 0 0 / 10%);
+  width: 100%;
+
+  @media screen and (width >= 576px) {
+    width: 550px;
+    max-height: 752px;
+    margin: 0;
+  }
+
+  @media screen and (width >= 768px) {
+    max-height: 753px;
+    width: 600px;
+    margin: 0;
+  }
+
+  @media screen and (width >= 992px) {
+    max-height: 900px;
+    width: 700px;
+    margin: 0;
+  }
+
+  @media screen and (width >= 1200px) {
+    position: relative;
+    width: 750px;
+    max-height: 850px;
+    margin: 0;
+  }
+
+  @media screen and (width >= 1400px) {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translate(-6%, -50%);
+    width: 744px;
+    height: 860px;
+    margin: 0;
+  }
+}
+
+.contact-us-form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 35px;
+
+  @media screen and (width >= 992px) {
+    margin: 50px 70px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input,
+    textarea {
+      box-shadow: 0 0 11px 0 rgb(0 0 0 / 10%);
+      font-weight: 500;
+      width: 100%;
+      padding: 17px 30px;
+      background: #f2eddc;
+      border-radius: 10px;
+      margin-bottom: 35px;
+      color: #9a9797;
+
+      @include adaptive-value('font-size', 20, 18, 0);
+
+      &::placeholder {
+        color: #9a9797;
+      }
+
+      @media screen and (width >= 992px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    textarea {
+      height: 172px;
+    }
+
+    button {
+      max-width: 100%;
+      border-radius: 10px;
+      color: #d9d2b0;
+      background: #593a28;
+      padding: 24px 63px;
+      transition: all 0.3s linear;
+      font-weight: 500;
+      margin-bottom: 35px;
+
+      @include adaptive-value('font-size', 24, 19, 0);
+
+      &:hover {
+        cursor: pointer;
+        background: #402e21;
+      }
+
+      @media screen and (width >= 992px) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+.contact-us-form-container-social {
+  &__title {
+    color: #402e21;
+    font-weight: 500;
+
+    @include adaptive-value('font-size', 24, 19, 0);
+
+    text-align: center;
+    margin-bottom: 25px;
+
+    @media screen and (width >= 992px) {
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.contact-us-form-container-social-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (width >= 576px) {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__icons {
+    a {
+      margin-right: 20px;
+      transition: all 0.3s linear;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      img {
+        transition: all 0.3s linear;
+      }
+    }
+  }
+}
+
+.contact-us-form-container-social-info-text {
+  @include adaptive-value('font-size', 20, 18, 0);
+
+  font-weight: 500;
+  color: #402e21;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media screen and (width >= 576px) {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  a {
+    position: relative;
+    color: #402e21;
+  }
+
+  &__phone,
+  &__email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (width >= 576px) {
+      flex-direction: column;
+    }
+  }
+
+  &__email {
+    margin-top: 10px;
+  }
+}
