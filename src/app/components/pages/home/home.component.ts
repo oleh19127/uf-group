@@ -5,6 +5,7 @@ import { ServicesComponent } from '../../blocks/services/services.component';
 import { OurNewsComponent } from '../../blocks/our-news/our-news.component';
 import { VideoComponent } from '../../blocks/video/video.component';
 import { ContactUsComponent } from '../../blocks/contact-us/contact-us.component';
+import { StandardsComponent } from '../../blocks/standards/standards.component';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import { ContactUsComponent } from '../../blocks/contact-us/contact-us.component
     OurNewsComponent,
     VideoComponent,
     ContactUsComponent,
+    StandardsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
