@@ -7,9 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format": "prettier --write .",
+    "format": "npx prettier --write .",
     "lint": "ng lint --fix",
-    "style-lint": "stylelint \"**/*.scss\" --fix",
+    "eslint": "npx eslint . --fix",
+    "style-lint": "npx stylelint \"**/*.scss\" --fix",
     "fix-all-code-style": "concurrently \"npm run format\" \"npm run lint\" \"npm run style-lint\"",
     "serve:ssr:front-end": "node dist/front-end/server/server.mjs",
     "prepare": "husky"
@@ -18,16 +19,15 @@
     "node": "18.x"
   },
   "lint-staged": {
-    "*.{json,md}": [
-      "prettier --write"
+    "*": [
+      "npx prettier --write"
     ],
     "*.{html,ts}": [
-      "ng lint --fix",
-      "prettier --write"
+      "npx eslint  --fix",
+      "ng lint"
     ],
     "*.scss": [
-      "stylelint --fix",
-      "prettier --write"
+      "npx stylelint --fix"
     ]
   },
   "private": true,
