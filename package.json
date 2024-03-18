@@ -20,11 +20,10 @@
   },
   "lint-staged": {
     "*": [
-      "npx prettier --write"
+      "npx prettier --write --ignore-unknown"
     ],
     "*.{html,ts}": [
-      "npx eslint  --fix",
-      "ng lint"
+      "npx eslint  --fix"
     ],
     "*.scss": [
       "npx stylelint --fix"
