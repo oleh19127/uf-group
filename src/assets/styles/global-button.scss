@@ -7,12 +7,27 @@
   justify-content: center;
   align-items: center;
 
+  &:hover {
+    span {
+      color: #593a28;
+    }
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
   @include adaptive-value('padding', 25, 17, 0);
+
+  img {
+    transition: all 0.3s linear;
+  }
 
   span {
     margin-right: 15px;
     color: #402e21;
     font-weight: 600;
+    transition: all 0.3s linear;
 
     @include adaptive-value('font-size', 23, 17, 0);
   }
