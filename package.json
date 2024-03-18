@@ -18,7 +18,7 @@
     "node": "18.x"
   },
   "lint-staged": {
-    "*.{scss,json,md}": [
+    "*.{json,md}": [
       "prettier --write"
     ],
     "*.{html,ts}": [
@@ -26,7 +26,8 @@
       "prettier --write"
     ],
     "*.scss": [
-      "stylelint --fix"
+      "stylelint --fix",
+      "prettier --write"
     ]
   },
   "private": true,
