@@ -1,1 +1,1 @@
-npm run fix-all-code-style
+npx lint-staged
