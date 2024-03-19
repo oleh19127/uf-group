@@ -11,7 +11,7 @@
     "lint": "ng lint --fix",
     "eslint": "npx eslint . --fix",
     "style-lint": "npx stylelint \"**/*.scss\" --fix",
-    "fix-all-code-style": "concurrently \"npm run format\" \"npm run lint\" \"npm run style-lint\"",
+    "fix-all-code-style": "concurrently \"npm run format\" \"npm run lint\" \"npm run style-lint\" \"npm run eslint\"",
     "serve:ssr:front-end": "node dist/front-end/server/server.mjs",
     "prepare": "husky"
   },
