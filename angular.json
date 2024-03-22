@@ -24,11 +24,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets"],
-            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap-grid.css",
-              "node_modules/hamburgers/dist/hamburgers.css",
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
