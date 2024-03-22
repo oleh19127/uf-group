@@ -8,15 +8,11 @@
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
 
-  max-width: 100%;
+  width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
-}
-
-.container-fluid {
-  width: 100%;
 }
 
 @media (width >= 576px) {
