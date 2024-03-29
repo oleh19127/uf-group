@@ -12,10 +12,12 @@
         <div class="col-12">
           <div class="contact-us__bg">
             <app-progressive-image
-              imageUrl="assets/images/contact-us/contact-us-bg.webp"
-              imageUrlPlaceholder="assets/images/contact-us/contact-us-bg-placeholder.webp"
+              class="contact-us-bg-image"
+              imageUrl="images/contact-us/contact-us-bg.jpg"
               imagePriority="false"
               imageAlt="contact-us-bg"
+              imageHeight="774"
+              imageWidth="1728"
               imageFill="true"
             ></app-progressive-image>
             <div class="contact-us__form contact-us-form">
@@ -57,31 +59,40 @@
                     </div>
                     <div class="contact-us-form-container-social-info__icons">
                       <a href="tg://resolve?domain=+380973201371">
-                        <img
-                          ngSrc="assets/images/contact-us/telegram.svg"
-                          alt="telegram"
-                          height="54"
-                          width="54"
-                        />
+                        <app-progressive-image
+                          class="icon-img"
+                          imageUrl="images/contact-us/telegram.svg"
+                          imagePriority="false"
+                          imageAlt="telegram"
+                          imageHeight="54"
+                          imageWidth="54"
+                          imageFill="false"
+                        ></app-progressive-image>
                       </a>
                       <a href="viber://chat?number=+380973201371">
-                        <img
-                          ngSrc="assets/images/contact-us/viber.svg"
-                          alt="viber"
-                          height="54"
-                          width="54"
-                        />
+                        <app-progressive-image
+                          class="icon-img"
+                          imageUrl="images/contact-us/viber.svg"
+                          imagePriority="false"
+                          imageAlt="viber"
+                          imageHeight="54"
+                          imageWidth="54"
+                          imageFill="false"
+                        ></app-progressive-image>
                       </a>
                       <a
                         href="https://www.instagram.com/elitfasad/"
                         target="_blank"
                       >
-                        <img
-                          ngSrc="assets/images/contact-us/instagram.svg"
-                          alt="instagram"
-                          height="54"
-                          width="54"
-                        />
+                        <app-progressive-image
+                          class="icon-img"
+                          imageUrl="images/contact-us/instagram.svg"
+                          imagePriority="false"
+                          imageAlt="instagram"
+                          imageHeight="54"
+                          imageWidth="54"
+                          imageFill="false"
+                        ></app-progressive-image>
                       </a>
                     </div>
                   </div>

@@ -4,7 +4,7 @@ import {
   Inject,
   OnInit,
 } from '@angular/core';
-import { DOCUMENT, NgOptimizedImage } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 import { SwiperContainer } from 'swiper/swiper-element';
 import { SwiperOptions } from 'swiper/types';
 import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
@@ -12,7 +12,7 @@ import { ProgressiveImageComponent } from '../progressive-image/progressive-imag
 @Component({
   selector: 'app-our-news',
   standalone: true,
-  imports: [NgOptimizedImage, ProgressiveImageComponent],
+  imports: [ProgressiveImageComponent],
   templateUrl: './our-news.component.html',
   styleUrl: './our-news.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

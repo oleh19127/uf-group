@@ -79,6 +79,7 @@
 
     .col-sm-4,
     .col-sm-8 {
+      position: relative;
       max-height: 349px !important;
       margin-bottom: 20px;
 
@@ -110,6 +111,7 @@
 
   .services-right-side {
     .col-12 {
+      position: relative;
       margin-bottom: 20px;
 
       @media screen and (width >= 1200px) {

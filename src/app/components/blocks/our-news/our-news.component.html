@@ -10,26 +10,29 @@
     <div class="row">
       <div class="col-12">
         <div class="swiper-button-prev">
-          <img
-            ngSrc="assets/images/slider/left-arrow.svg"
-            alt="left-arrow"
-            height="16"
-            width="32"
-          />
+          <app-progressive-image
+            imageUrl="images/slider/left-arrow.svg"
+            imageAlt="left-arrow"
+            imageHeight="16"
+            imageWidth="32"
+            imagePriority="false"
+            imageFill="false"
+          ></app-progressive-image>
         </div>
         <div class="swiper-button-next">
-          <img
-            ngSrc="assets/images/slider/right-arrow.svg"
-            alt="right-arrow"
-            height="16"
-            width="32"
-          />
+          <app-progressive-image
+            imageUrl="images/slider/right-arrow.svg"
+            imageAlt="right-arrow"
+            imageHeight="16"
+            imageWidth="32"
+            imagePriority="false"
+            imageFill="false"
+          ></app-progressive-image>
         </div>
         <swiper-container class="swiper-container" init="false">
           <swiper-slide class="swiper-slide">
             <app-progressive-image
-              imageUrl="assets/images/our-news/news-slide.webp"
-              imageUrlPlaceholder="assets/images/our-news/news-slide-placeholder.webp"
+              imageUrl="images/our-news/news-slide.webp"
               imageAlt="our-news-slide-image"
               imageHeight="1000"
               imageWidth="1628"
@@ -47,8 +50,7 @@
           </swiper-slide>
           <swiper-slide class="swiper-slide">
             <app-progressive-image
-              imageUrl="assets/images/our-news/news-slide.webp"
-              imageUrlPlaceholder="assets/images/our-news/news-slide-placeholder.webp"
+              imageUrl="images/our-news/news-slide.webp"
               imageAlt="our-news-slide-image"
               imageHeight="1000"
               imageWidth="1628"

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 
 @Component({
   selector: 'app-preloader',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [ProgressiveImageComponent],
   templateUrl: './preloader.component.html',
   styleUrl: './preloader.component.scss',
 })

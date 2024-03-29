@@ -8,14 +8,16 @@
               (click)="removeActiveClass()"
               routerLink="/home"
               class="header-container-logo__link"
-              ><img
-                ngSrc="../../../../assets/images/header/logo.svg"
-                priority
-                alt="logo"
+            >
+              <app-progressive-image
                 class="header-container-logo__img"
-                height="30"
-                width="202"
-              />
+                imageUrl="images/header/logo.svg"
+                imageAlt="logo"
+                imagePriority="true"
+                imageFill="false"
+                imageWidth="202"
+                imageHeight="30"
+              ></app-progressive-image>
               <h2 class="header-container-logo__text">
                 Ваш дім - наше мистецтво
               </h2>

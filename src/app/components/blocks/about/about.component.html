@@ -20,12 +20,15 @@
       <div class="col-12 about-btn-container">
         <a (click)="goToTop()" routerLink="/about-us" class="global-button">
           <span>Дізнатись більше</span>
-          <img
-            ngSrc="assets/images/global/global-button-arrow.svg"
-            alt="global-button-arrow"
-            height="16"
-            width="32"
-          />
+          <app-progressive-image
+            imageHeight="16"
+            imageWidth="32"
+            imageFill="false"
+            imagePriority="false"
+            imageAlt="global-button-arrow"
+            imageUrl="images/global/global-button-arrow.svg"
+          >
+          </app-progressive-image>
         </a>
       </div>
     </div>

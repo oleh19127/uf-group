@@ -1,9 +1,12 @@
 <div class="intro">
   <app-progressive-image
-    imageFill="true"
+    class="bg-intro-img"
     imageAlt="intro-bg"
     imagePriority="true"
-    imageUrl="/images/intro/intro-background.jpg"
+    imageUrl="images/intro/intro-background.jpg"
+    imageFill="false"
+    imageWidth="1728"
+    imageHeight="800"
   ></app-progressive-image>
   <div class="container-fluid">
     <div class="row">
@@ -14,13 +17,14 @@
         </h1>
         <a (click)="goToTop()" routerLink="/contact" class="global-button">
           <span>Замовити розкрій</span>
-          <img
-            ngSrc="assets/images/global/global-button-arrow.svg"
-            alt="global-button-arrow"
-            height="16"
-            width="32"
-            priority
-          />
+          <app-progressive-image
+            imageAlt="global-button-arrow"
+            imagePriority="true"
+            imageUrl="images/global/global-button-arrow.svg"
+            imageWidth="32"
+            imageHeight="16"
+            imageFill="false"
+          ></app-progressive-image>
         </a>
       </div>
     </div>
