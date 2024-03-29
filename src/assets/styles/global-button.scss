@@ -12,14 +12,14 @@
       color: #593a28;
     }
 
-    img {
+    .global-button-img {
       transform: scale(1.1);
     }
   }
 
   @include adaptive-value('padding', 25, 17, 0);
 
-  img {
+  .global-button-img {
     transition: all 0.3s linear;
   }
 
