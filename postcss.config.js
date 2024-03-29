@@ -1,5 +1,9 @@
 module.exports = {
   plugins: {
-    autoprefixer: {},
+    autoprefixer: {
+      browserslist: ['last 3 versions'],
+      flexbox: true,
+      grid: true,
+    },
   },
 };
