@@ -31,42 +31,26 @@
         </div>
         @defer (on immediate) {
           <swiper-container class="our-news-swiper-container" init="false">
-            <swiper-slide class="our-news-swiper-slide">
-              <app-progressive-image
-                imageUrl="images/our-news/news-slide.jpg"
-                imageAlt="our-news-slide-image"
-                imageHeight="1000"
-                imageWidth="1628"
-                imagePriority="false"
-                imageFill="false"
-              ></app-progressive-image>
-              <p class="our-news-swiper-slide__text">
-                <span
-                  >В Elit-Fasad з’явився великий вибір декорів стільниць
-                  PFLEIDERER.
-                </span>
-                <span>Формат стільниці 4100*600 та 4100*1200</span>
-                <span>Товщина 38мм </span>
-              </p>
-            </swiper-slide>
-            <swiper-slide class="our-news-swiper-slide">
-              <app-progressive-image
-                imageUrl="images/our-news/news-slide.jpg"
-                imageAlt="our-news-slide-image"
-                imageHeight="1000"
-                imageWidth="1628"
-                imagePriority="false"
-                imageFill="false"
-              ></app-progressive-image>
-              <p class="our-news-swiper-slide__text">
-                <span
-                  >В Elit-Fasad з’явився великий вибір декорів стільниць
-                  PFLEIDERER.
-                </span>
-                <span>Формат стільниці 4100*600 та 4100*1200</span>
-                <span>Товщина 38мм </span>
-              </p>
-            </swiper-slide>
+            @for (slide of slides; track slide) {
+              <swiper-slide class="our-news-swiper-slide" [id]="slide">
+                <app-progressive-image
+                  imageUrl="images/our-news/news-slide.jpg"
+                  imageAlt="our-news-slide-image"
+                  imageHeight="1000"
+                  imageWidth="1628"
+                  imagePriority="false"
+                  imageFill="false"
+                ></app-progressive-image>
+                <p class="our-news-swiper-slide__text">
+                  <span
+                    >В Elit-Fasad з’явився великий вибір декорів стільниць
+                    PFLEIDERER.
+                  </span>
+                  <span>Формат стільниці 4100*600 та 4100*1200</span>
+                  <span>Товщина 38мм </span>
+                </p>
+              </swiper-slide>
+            }
           </swiper-container>
         } @placeholder {
           <h2 class="our-news__title global-block-title">Наші Новинки</h2>

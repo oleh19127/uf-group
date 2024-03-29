@@ -18,12 +18,13 @@ import { ProgressiveImageComponent } from '../progressive-image/progressive-imag
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class OurNewsComponent implements AfterViewInit {
+  slides = [1, 2];
   constructor(@Inject(DOCUMENT) private document: Document) {}
   ngAfterViewInit() {
     this.initSlider();
   }
   initSlider() {
-    const swiperEl = this.document.querySelector(
+    const ourNewsSwiper = this.document.querySelector(
       '.our-news-swiper-container',
     ) as SwiperContainer;
     const swiperButtonNext = this.document.querySelector(
@@ -48,7 +49,7 @@ export class OurNewsComponent implements AfterViewInit {
         init() {},
       },
     } as SwiperOptions;
-    Object.assign(swiperEl, swiperParams);
-    swiperEl.initialize();
+    Object.assign(ourNewsSwiper, swiperParams);
+    ourNewsSwiper.initialize();
   }
 }
