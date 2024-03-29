@@ -10,57 +10,65 @@
     <div class="row">
       <div class="col-12">
         <div class="swiper-wrap">
-          <swiper-container init="false">
-            <swiper-slide>
-              <div class="slide-block">
-                <div class="slide-block__img slide-block-img">
-                  <app-progressive-image
-                    imageHeight="250"
-                    imageWidth="385"
-                    imageFill="false"
-                    imagePriority="false"
-                    imageAlt="hot-top-slide-placeholder"
-                    imageUrl="images/hot-top/hot-top-placeholder.jpg"
-                  ></app-progressive-image>
-                  <div class="slide-block-img__code">
-                    <span>код:</span>
-                    <span>000000</span>
+          @defer (on immediate) {
+            <swiper-container class="hot-top-swiper-container" init="false">
+              @for (slide of slides; track slide) {
+                <swiper-slide class="hot-top-swiper-slide" [id]="slide">
+                  <div class="slide-block">
+                    <div class="slide-block__img slide-block-img">
+                      <app-progressive-image
+                        imageHeight="250"
+                        imageWidth="385"
+                        imageFill="false"
+                        imagePriority="false"
+                        imageAlt="hot-top-slide-placeholder"
+                        imageUrl="images/hot-top/hot-top-placeholder.jpg"
+                      ></app-progressive-image>
+                      <div class="slide-block-img__code">
+                        <span>код:</span>
+                        <span>000000</span>
+                      </div>
+                      <div class="slide-block-img__icon">
+                        <app-progressive-image
+                          imageHeight="50"
+                          imageWidth="50"
+                          imageFill="false"
+                          imagePriority="false"
+                          imageAlt="heart-icon"
+                          imageUrl="images/hot-top/heart-icon.svg"
+                        ></app-progressive-image>
+                      </div>
+                    </div>
+                    <div class="slide-block__info slide-block-info">
+                      <h3 class="slide-block-info__title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ullam similique alias molestiae asperiores deleniti
+                        praesentium, rem quia nostrum ut, totam sapiente cumque
+                        nulla. Distinctio labore ducimus repudiandae illo eos
+                        quidem.
+                      </h3>
+                    </div>
+                    <div class="slide-block__basket slide-block-basket">
+                      <app-progressive-image
+                        imageHeight="44"
+                        imageWidth="44"
+                        imageFill="false"
+                        imagePriority="false"
+                        imageAlt="basket-icon"
+                        imageUrl="images/hot-top/basket-icon.svg"
+                      ></app-progressive-image>
+                    </div>
                   </div>
-                  <div class="slide-block-img__icon">
-                    <app-progressive-image
-                      imageHeight="50"
-                      imageWidth="50"
-                      imageFill="false"
-                      imagePriority="false"
-                      imageAlt="heart-icon"
-                      imageUrl="images/hot-top/heart-icon.svg"
-                    ></app-progressive-image>
-                  </div>
-                </div>
-                <div class="slide-block__info slide-block-info">
-                  <h3 class="slide-block-info__title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam similique alias molestiae asperiores deleniti
-                    praesentium, rem quia nostrum ut, totam sapiente cumque
-                    nulla. Distinctio labore ducimus repudiandae illo eos
-                    quidem.
-                  </h3>
-                </div>
-                <div class="slide-block__basket slide-block-basket">
-                  <app-progressive-image
-                    imageHeight="44"
-                    imageWidth="44"
-                    imageFill="false"
-                    imagePriority="false"
-                    imageAlt="basket-icon"
-                    imageUrl="images/hot-top/basket-icon.svg"
-                  ></app-progressive-image>
-                </div>
-              </div> </swiper-slide
-            >`;
-          </swiper-container>
+                </swiper-slide>
+              }
+            </swiper-container>
+          } @placeholder {
+            <h2 class="hot-top__title global-block-title">
+              Гарячий топ сезону
+            </h2>
+          }
           <div class="swiper-navigation-container">
-            <div class="swiper-button-prev">
+            <div class="hot-top-swiper-button-prev">
               <app-progressive-image
                 imageHeight="16"
                 imageWidth="32"
@@ -70,8 +78,8 @@
                 imageUrl="images/slider/left-arrow.svg"
               ></app-progressive-image>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next">
+            <div class="hot-top-swiper-pagination"></div>
+            <div class="hot-top-swiper-button-next">
               <app-progressive-image
                 imageHeight="16"
                 imageWidth="32"

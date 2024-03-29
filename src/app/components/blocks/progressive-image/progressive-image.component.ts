@@ -11,7 +11,7 @@ import {
   selector: 'app-progressive-image',
   standalone: true,
   imports: [NgStyle, NgClass, NgOptimizedImage, NgIf],
-  providers: [provideImgixLoader('https://oberon-985042972.imgix.net')],
+  providers: [provideImgixLoader('https://oberon-836005198.imgix.net')],
   templateUrl: './progressive-image.component.html',
   styleUrl: './progressive-image.component.scss',
 })

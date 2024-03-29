@@ -6,6 +6,7 @@ import { OurNewsComponent } from '../../blocks/our-news/our-news.component';
 import { VideoComponent } from '../../blocks/video/video.component';
 import { ContactUsComponent } from '../../blocks/contact-us/contact-us.component';
 import { StandardsComponent } from '../../blocks/standards/standards.component';
+import { HotTopComponent } from '../../blocks/hot-top/hot-top.component';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import { StandardsComponent } from '../../blocks/standards/standards.component';
     VideoComponent,
     ContactUsComponent,
     StandardsComponent,
+    HotTopComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
