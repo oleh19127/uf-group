@@ -1,12 +1,13 @@
 <div class="loading-screen">
-  <img
-    ngSrc="assets/images/header/logo.svg"
-    alt="logo"
+  <app-progressive-image
     class="header-container-logo__img"
-    height="30"
-    width="202"
-    priority
-  />
+    imageUrl="images/header/logo.svg"
+    imageAlt="logo"
+    imagePriority="true"
+    imageFill="false"
+    imageWidth="202"
+    imageHeight="30"
+  ></app-progressive-image>
   <h2>Ваш дім - наше мистецтво</h2>
   <div class="loader"></div>
 </div>

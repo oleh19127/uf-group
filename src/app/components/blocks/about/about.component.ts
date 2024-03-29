@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [RouterLink, ProgressiveImageComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

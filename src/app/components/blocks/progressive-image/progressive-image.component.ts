@@ -18,11 +18,11 @@ import {
 export class ProgressiveImageComponent {
   @Input({ required: true }) imageUrl!: string;
   @Input({ required: true }) imageAlt!: string;
-  @Input({}) imageWidth!: string;
-  @Input({}) imageHeight!: string;
+  @Input() imageWidth!: string;
+  @Input() imageHeight!: string;
   @Input({ transform: booleanAttribute, required: true })
   imagePriority!: boolean;
-  @Input({ transform: booleanAttribute, required: true }) imageFill!: boolean;
-
+  @Input({ transform: booleanAttribute, required: true })
+  imageFill!: boolean;
   imageSrcset = '640w, 750w, 828w, 1080w, 1200w, 1920w, 2048w, 3840w';
 }

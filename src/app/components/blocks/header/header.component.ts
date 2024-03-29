@@ -1,11 +1,12 @@
 import { Component, HostListener, Inject, Renderer2 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { DOCUMENT, NgOptimizedImage } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
+import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgOptimizedImage],
+  imports: [RouterLink, RouterLinkActive, ProgressiveImageComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

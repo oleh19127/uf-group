@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 
 @Component({
   selector: 'app-standards',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [ProgressiveImageComponent],
   templateUrl: './standards.component.html',
   styleUrl: './standards.component.scss',
 })

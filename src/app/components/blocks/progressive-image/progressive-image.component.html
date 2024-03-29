@@ -1,5 +1,6 @@
 @if (imageFill) {
   <img
+    class="image"
     [ngSrc]="imageUrl"
     [alt]="imageAlt"
     [fill]="imageFill"
@@ -9,6 +10,7 @@
   />
 } @else {
   <img
+    class="image"
     [ngSrc]="imageUrl"
     [alt]="imageAlt"
     [height]="imageHeight"

@@ -48,7 +48,7 @@
       height: 774px;
     }
 
-    app-progressive-image {
+    .contact-us-bg-image {
       position: absolute;
       top: 0;
       left: 0;
@@ -198,6 +198,9 @@
   }
 
   &__icons {
+    display: flex;
+    align-items: center;
+
     a {
       margin-right: 20px;
       transition: all 0.3s linear;
