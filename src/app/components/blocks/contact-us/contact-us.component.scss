@@ -210,12 +210,12 @@
       }
 
       &:hover {
-        img {
+        .icon-img {
           transform: scale(1.1);
         }
       }
 
-      img {
+      .icon-img {
         transition: all 0.3s linear;
       }
     }

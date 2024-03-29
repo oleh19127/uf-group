@@ -33,20 +33,44 @@
         z-index: 99 !important;
         font-weight: 700;
         color: #402e21;
-        display: flex;
         flex-direction: column;
-        left: 25px;
-        bottom: 50px;
-        padding-right: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        padding: 25px;
+        width: 100%;
+        max-width: 230px;
+        max-height: 120px;
+        background-image: linear-gradient(
+          to left,
+          rgb(217 210 176 / 25%),
+          rgb(217 210 176 / 65%)
+        );
+        border-radius: 15px;
 
-        @media screen and (width >= 425px) {
-          left: 50px;
-          bottom: 50px;
+        @media screen and (width >= 491px) {
+          max-width: 350px;
+        }
+
+        @media screen and (width >= 991px) {
+          left: 25px;
+          transform: translateX(0%);
+          top: 30px;
+          max-width: 400px;
         }
 
         @include adaptive-value('font-size', 23, 17, 0);
 
         span {
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          display: -webkit-box !important;
+
+          &:nth-child(1) {
+            -webkit-line-clamp: 2;
+          }
+
           &:nth-child(2),
           &:nth-child(3) {
             display: none;
