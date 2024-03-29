@@ -1,26 +1,20 @@
-<div
-  [ngStyle]="{ 'background-image': 'url(' + imageUrlPlaceholder + ')' }"
-  class="placeholder"
-  [ngClass]="{ placeholder: true, 'placeholder-loaded': isLoaded }"
->
-  @if (imageFill) {
-    <img
-      [ngClass]="{ image: true, 'image-loaded': isLoaded }"
-      [ngSrc]="imageUrl"
-      [alt]="imageAlt"
-      [fill]="imageFill"
-      (load)="onImageLoad()"
-      [priority]="imagePriority"
-    />
-  } @else {
-    <img
-      [ngClass]="{ image: true, 'image-loaded': isLoaded }"
-      [ngSrc]="imageUrl"
-      [alt]="imageAlt"
-      [height]="imageHeight"
-      [width]="imageWidth"
-      (load)="onImageLoad()"
-      [priority]="imagePriority"
-    />
-  }
-</div>
+@if (imageFill) {
+  <img
+    [ngSrc]="imageUrl"
+    [alt]="imageAlt"
+    [fill]="imageFill"
+    [priority]="imagePriority"
+    [ngSrcset]="imageSrcset"
+    placeholder
+  />
+} @else {
+  <img
+    [ngSrc]="imageUrl"
+    [alt]="imageAlt"
+    [height]="imageHeight"
+    [width]="imageWidth"
+    [priority]="imagePriority"
+    [ngSrcset]="imageSrcset"
+    placeholder
+  />
+}

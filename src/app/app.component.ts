@@ -1,4 +1,4 @@
-import { Component, Inject, Renderer2, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, Renderer2 } from '@angular/core';
 
 import {
   ChildrenOutletContexts,
