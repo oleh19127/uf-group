@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { NgStyle } from '@angular/common';
 import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [NgStyle, ProgressiveImageComponent, RouterLink],
+  imports: [ProgressiveImageComponent, RouterLink],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss',
 })

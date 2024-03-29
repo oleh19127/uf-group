@@ -67,7 +67,7 @@ export class HotTopComponent implements AfterViewInit {
       spaceBetween: 20,
       on: {
         init() {
-          console.log('Hot Top Slider successfully init!!!');
+          // console.log('Hot Top Slider successfully init!!!');
         },
         destroy() {
           // logger.info('Hot Top Slider successfully destroyed!!!');

@@ -1,16 +1,10 @@
 import { booleanAttribute, Component, Input } from '@angular/core';
-import {
-  NgClass,
-  NgIf,
-  NgOptimizedImage,
-  NgStyle,
-  provideImgixLoader,
-} from '@angular/common';
+import { NgOptimizedImage, provideImgixLoader } from '@angular/common';
 
 @Component({
   selector: 'app-progressive-image',
   standalone: true,
-  imports: [NgStyle, NgClass, NgOptimizedImage, NgIf],
+  imports: [NgOptimizedImage],
   providers: [provideImgixLoader('https://oberon-836005198.imgix.net')],
   templateUrl: './progressive-image.component.html',
   styleUrl: './progressive-image.component.scss',
