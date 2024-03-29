@@ -127,12 +127,12 @@
       background: #f2eddc;
       border-radius: 10px;
       margin-bottom: 35px;
-      color: #9a9797;
+      color: #593a28;
 
       @include adaptive-value('font-size', 20, 18, 0);
 
       &::placeholder {
-        color: #9a9797;
+        color: #593a28;
       }
 
       @media screen and (width >= 992px) {
