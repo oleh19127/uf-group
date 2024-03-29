@@ -1,8 +1,8 @@
 import {
+  AfterViewInit,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   Inject,
-  OnInit,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { SwiperContainer } from 'swiper/swiper-element';
@@ -17,20 +17,27 @@ import { ProgressiveImageComponent } from '../progressive-image/progressive-imag
   styleUrl: './our-news.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class OurNewsComponent implements OnInit {
+export class OurNewsComponent implements AfterViewInit {
   constructor(@Inject(DOCUMENT) private document: Document) {}
-  ngOnInit() {
+  ngAfterViewInit() {
     this.initSlider();
   }
   initSlider() {
     const swiperEl = this.document.querySelector(
-      'swiper-container',
+      '.our-news-swiper-container',
     ) as SwiperContainer;
+    const swiperButtonNext = this.document.querySelector(
+      '.our-news-swiper-button-next',
+    ) as HTMLElement;
+    const swiperButtonPrev = this.document.querySelector(
+      '.our-news-swiper-button-prev',
+    ) as HTMLElement;
+
     const swiperParams = {
       slidesPerView: 1,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: swiperButtonNext,
+        prevEl: swiperButtonPrev,
       },
       loop: true,
       autoplay: {
@@ -38,9 +45,7 @@ export class OurNewsComponent implements OnInit {
         disableOnInteraction: true,
       },
       on: {
-        init() {
-          // ...
-        },
+        init() {},
       },
     } as SwiperOptions;
     Object.assign(swiperEl, swiperParams);
