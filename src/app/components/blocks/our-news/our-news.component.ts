@@ -19,37 +19,68 @@ import { ProgressiveImageComponent } from '../progressive-image/progressive-imag
 })
 export class OurNewsComponent implements AfterViewInit {
   slides = [1, 2];
+
+  ourNewsSwiperSelector = '.our-news-swiper-container';
+  ourNewsSwiper: SwiperContainer | undefined;
+
+  swiperButtonNextSelector = '.our-news-swiper-button-next';
+  swiperButtonNext: HTMLElement | undefined;
+
+  swiperButtonPrevSelector = '.our-news-swiper-button-prev';
+  swiperButtonPrev: HTMLElement | undefined;
+
   constructor(@Inject(DOCUMENT) private document: Document) {}
+
   ngAfterViewInit() {
     this.initSlider();
   }
-  initSlider() {
-    const ourNewsSwiper = this.document.querySelector(
-      '.our-news-swiper-container',
-    ) as SwiperContainer;
-    const swiperButtonNext = this.document.querySelector(
-      '.our-news-swiper-button-next',
-    ) as HTMLElement;
-    const swiperButtonPrev = this.document.querySelector(
-      '.our-news-swiper-button-prev',
-    ) as HTMLElement;
 
-    const swiperParams = {
-      slidesPerView: 1,
-      navigation: {
-        nextEl: swiperButtonNext,
-        prevEl: swiperButtonPrev,
-      },
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: true,
-      },
-      on: {
-        init() {},
-      },
-    } as SwiperOptions;
-    Object.assign(ourNewsSwiper, swiperParams);
-    ourNewsSwiper.initialize();
+  initSlider() {
+    try {
+      this.ourNewsSwiper = this.document.querySelector(
+        this.ourNewsSwiperSelector,
+      ) as SwiperContainer;
+
+      this.swiperButtonNext = this.document.querySelector(
+        this.swiperButtonNextSelector,
+      ) as HTMLElement;
+
+      this.swiperButtonPrev = this.document.querySelector(
+        this.swiperButtonPrevSelector,
+      ) as HTMLElement;
+      if (
+        this.ourNewsSwiper &&
+        this.swiperButtonNext &&
+        this.swiperButtonPrev
+      ) {
+        const swiperParams = {
+          slidesPerView: 1,
+          navigation: {
+            nextEl: this.swiperButtonNext,
+            prevEl: this.swiperButtonPrev,
+          },
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+          },
+          on: {
+            init() {
+              console.log('Our News Slider successfully init!!!');
+            },
+            destroy() {
+              console.log('Our News Slider successfully destroyed!!!');
+            },
+            update() {
+              console.log('Our News Slider successfully updated!!!');
+            },
+          },
+        } as SwiperOptions;
+        Object.assign(this.ourNewsSwiper, swiperParams);
+        this.ourNewsSwiper.initialize();
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
