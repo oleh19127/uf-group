@@ -24,7 +24,7 @@ export class HotTopComponent implements AfterViewInit {
     this.initSlider();
   }
   initSlider() {
-    const swiperEl = this.document.querySelector(
+    const hotTopSwiper = this.document.querySelector(
       '.hot-top-swiper-container',
     ) as SwiperContainer;
     const swiperButtonNext = this.document.querySelector(
@@ -77,7 +77,7 @@ export class HotTopComponent implements AfterViewInit {
         },
       },
     } as SwiperOptions;
-    Object.assign(swiperEl, swiperParams);
-    swiperEl.initialize();
+    Object.assign(hotTopSwiper, swiperParams);
+    hotTopSwiper.initialize();
   }
 }
