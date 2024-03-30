@@ -19,65 +19,91 @@ import { ProgressiveImageComponent } from '../progressive-image/progressive-imag
 })
 export class HotTopComponent implements AfterViewInit {
   slides = [1, 2, 3, 4, 5];
+
+  hotTopSwiperSelector = '.hot-top-swiper-container';
+  hotTopSwiper: SwiperContainer | undefined;
+
+  hotTopSwiperButtonNextSelector = '.hot-top-swiper-button-next';
+  hotTopSwiperButtonNext: HTMLElement | undefined;
+
+  hotTopSwiperButtonPrevSelector = '.hot-top-swiper-button-prev';
+  hotTopSwiperButtonPrev: HTMLElement | undefined;
+
+  hotTopSwiperPaginationSelector = '.hot-top-swiper-pagination';
+  hotTopSwiperPagination: HTMLElement | undefined;
+
   constructor(@Inject(DOCUMENT) private document: Document) {}
+
   ngAfterViewInit() {
     this.initSlider();
   }
-  initSlider() {
-    const hotTopSwiper = this.document.querySelector(
-      '.hot-top-swiper-container',
-    ) as SwiperContainer;
-    const swiperButtonNext = this.document.querySelector(
-      '.hot-top-swiper-button-next',
-    ) as HTMLElement;
-    const swiperButtonPrev = this.document.querySelector(
-      '.hot-top-swiper-button-prev',
-    ) as HTMLElement;
-    const swiperPagination = this.document.querySelector(
-      '.hot-top-swiper-pagination',
-    ) as HTMLElement;
 
-    const swiperParams = {
-      slidesPerView: 1,
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        1140: {
-          slidesPerView: 3,
-        },
-        1320: {
-          slidesPerView: 4,
-        },
-      },
-      navigation: {
-        nextEl: swiperButtonNext,
-        prevEl: swiperButtonPrev,
-      },
-      pagination: {
-        el: swiperPagination,
-        type: 'bullets',
-        clickable: true,
-      },
-      loop: true,
-      autoplay: {
-        delay: 2800,
-        disableOnInteraction: true,
-      },
-      spaceBetween: 20,
-      on: {
-        init() {
-          // console.log('Hot Top Slider successfully init!!!');
-        },
-        destroy() {
-          // logger.info('Hot Top Slider successfully destroyed!!!');
-        },
-        update() {
-          // logger.info('Hot Top Slider successfully updated!!!');
-        },
-      },
-    } as SwiperOptions;
-    Object.assign(hotTopSwiper, swiperParams);
-    hotTopSwiper.initialize();
+  initSlider() {
+    try {
+      this.hotTopSwiper = this.document.querySelector(
+        this.hotTopSwiperSelector,
+      ) as SwiperContainer;
+
+      this.hotTopSwiperButtonNext = this.document.querySelector(
+        this.hotTopSwiperButtonNextSelector,
+      ) as HTMLElement;
+      this.hotTopSwiperButtonPrev = this.document.querySelector(
+        this.hotTopSwiperButtonPrevSelector,
+      ) as HTMLElement;
+      this.hotTopSwiperPagination = this.document.querySelector(
+        this.hotTopSwiperPaginationSelector,
+      ) as HTMLElement;
+      if (
+        this.hotTopSwiper &&
+        this.hotTopSwiperButtonNext &&
+        this.hotTopSwiperButtonPrev &&
+        this.hotTopSwiperPagination
+      ) {
+        const swiperParams = {
+          slidesPerView: 1,
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+            },
+            1140: {
+              slidesPerView: 3,
+            },
+            1320: {
+              slidesPerView: 4,
+            },
+          },
+          navigation: {
+            nextEl: this.hotTopSwiperButtonNext,
+            prevEl: this.hotTopSwiperButtonPrev,
+          },
+          pagination: {
+            el: this.hotTopSwiperPagination,
+            type: 'bullets',
+            clickable: true,
+          },
+          loop: true,
+          autoplay: {
+            delay: 2800,
+            disableOnInteraction: true,
+          },
+          spaceBetween: 20,
+          on: {
+            init() {
+              console.log('Hot Top Slider successfully init!!!');
+            },
+            destroy() {
+              console.log('Hot Top Slider successfully destroyed!!!');
+            },
+            update() {
+              console.log('Hot Top Slider successfully updated!!!');
+            },
+          },
+        } as SwiperOptions;
+        Object.assign(this.hotTopSwiper, swiperParams);
+        this.hotTopSwiper.initialize();
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
