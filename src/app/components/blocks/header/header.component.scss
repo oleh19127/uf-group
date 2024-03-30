@@ -82,8 +82,6 @@
   height: 100%;
   z-index: 51;
 
-  // .header-container-logo__link
-
   &__link {
     height: 100%;
     display: flex;
@@ -91,14 +89,6 @@
     align-items: center;
     flex-direction: column;
   }
-
-  // .header-container-logo__img
-
-  &__img {
-    height: 28px;
-  }
-
-  // .header-container-logo__text
 
   &__text {
     @include adaptive-value('font-size', 20, 18, 0);
@@ -148,7 +138,6 @@
 }
 
 .header-container-menu-list-item {
-  // .header-container-menu-list-item__link
   margin-left: 78px;
 
   @media screen and (width <= 1200px) {
