@@ -7,6 +7,8 @@ import { VideoComponent } from '../../blocks/video/video.component';
 import { ContactUsComponent } from '../../blocks/contact-us/contact-us.component';
 import { StandardsComponent } from '../../blocks/standards/standards.component';
 import { HotTopComponent } from '../../blocks/hot-top/hot-top.component';
+import { HowToFindUsComponent } from '../../blocks/how-to-find-us/how-to-find-us.component';
+import { FooterComponent } from '../../blocks/footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +22,8 @@ import { HotTopComponent } from '../../blocks/hot-top/hot-top.component';
     ContactUsComponent,
     StandardsComponent,
     HotTopComponent,
+    HowToFindUsComponent,
+    FooterComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
