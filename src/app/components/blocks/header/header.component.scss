@@ -1,5 +1,7 @@
 @import '../../../../assets/styles/mixins/adaptive-font';
 @import '../../../../assets/styles/hamburger';
+@import '../../../../assets/styles/dark-theme';
+@import '../../../../assets/styles/light-theme';
 
 .header {
   position: fixed;
@@ -8,7 +10,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  transition: all 0.4s linear;
+  transition: all 0.3s linear;
 
   .container {
     height: 100%;
@@ -38,11 +40,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f2eddc;
     z-index: 50;
+    transition: background-color 0.3s linear;
 
     @media screen and (width <= 992px) {
       box-shadow: 0 0 11px 0 rgb(0 0 0 / 20%);
+    }
+  }
+
+  &.light-theme {
+    &::before {
+      background-color: $light-theme-background-color;
+    }
+  }
+
+  &.dark-theme {
+    &::before {
+      background-color: $dark-theme-background-color;
     }
   }
 }
@@ -63,10 +77,20 @@
 
     z-index: 51;
 
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      background: #402e21;
+    &.light-theme {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: $light-theme-color;
+      }
+    }
+
+    &.dark-theme {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: $dark-theme-color;
+      }
     }
 
     .hamburger-inner {
@@ -93,7 +117,16 @@
   &__text {
     @include adaptive-value('font-size', 20, 18, 0);
 
-    color: #593a28;
+    transition: color 0.3s linear;
+
+    &.light-theme {
+      color: $light-theme-color;
+    }
+
+    &.dark-theme {
+      color: $dark-theme-color;
+    }
+
     font-weight: 600;
   }
 }
@@ -113,12 +146,23 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: #f2eddc;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s linear;
     margin-top: 0;
     z-index: 49;
     overflow-y: auto;
     margin-right: 0;
+  }
+
+  &.light-theme {
+    @media screen and (width <= 992px) {
+      background-color: $light-theme-background-color;
+    }
+  }
+
+  &.dark-theme {
+    @media screen and (width <= 992px) {
+      background-color: $dark-theme-background-color;
+    }
   }
 }
 
@@ -159,16 +203,31 @@
     @include adaptive-value('font-size', 21, 25, 0);
 
     font-weight: 700;
-    color: #593a28;
+    transition: color 0.3s linear;
+
+    &.light-theme {
+      color: $light-theme-color;
+
+      &::before {
+        background-color: $light-theme-color;
+      }
+    }
+
+    &.dark-theme {
+      color: $dark-theme-color;
+
+      &::before {
+        background-color: $dark-theme-color;
+      }
+    }
 
     &::before {
       position: absolute;
-      transition: all 0.2s ease;
+      transition: all 0.3s linear;
       bottom: -4px;
       content: '';
       height: 2px;
       width: 0;
-      background: #593a28;
       border-radius: 20px;
     }
 
