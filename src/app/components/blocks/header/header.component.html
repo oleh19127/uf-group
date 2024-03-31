@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [ngClass]="themeService.themeSignal()">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -9,16 +9,31 @@
               routerLink="/home"
               class="header-container-logo__link"
             >
-              <app-progressive-image
-                class="header-container-logo__img"
-                imageUrl="images/header/logo.svg"
-                imageAlt="logo"
-                imagePriority="true"
-                imageFill="false"
-                imageWidth="202"
-                imageHeight="30"
-              ></app-progressive-image>
-              <h2 class="header-container-logo__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="header-container-logo__img"
+                  imageUrl="images/header/logo-dark-theme.svg"
+                  imageAlt="logo"
+                  imagePriority="true"
+                  imageFill="false"
+                  imageWidth="202"
+                  imageHeight="30"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="header-container-logo__img"
+                  imageUrl="images/header/logo-light-theme.svg"
+                  imageAlt="logo"
+                  imagePriority="true"
+                  imageFill="false"
+                  imageWidth="202"
+                  imageHeight="30"
+                ></app-progressive-image>
+              }
+              <h2
+                class="header-container-logo__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Ваш дім - наше мистецтво
               </h2>
             </a>
@@ -26,6 +41,7 @@
           <nav
             [class.is-active]="isActive"
             class="header-container__menu header-container-menu"
+            [ngClass]="themeService.themeSignal()"
           >
             <ul class="header-container-menu__list header-container-menu-list">
               <li
@@ -34,6 +50,7 @@
                 <a
                   (click)="removeActiveClass()"
                   class="header-container-menu-list-item__link"
+                  [ngClass]="themeService.themeSignal()"
                   routerLink="/home"
                   routerLinkActive="active-link"
                   ariaCurrentWhenActive="page"
@@ -47,6 +64,7 @@
                 <a
                   (click)="removeActiveClass()"
                   class="header-container-menu-list-item__link"
+                  [ngClass]="themeService.themeSignal()"
                   routerLink="/catalogue"
                   routerLinkActive="active-link"
                   ariaCurrentWhenActive="page"
@@ -60,6 +78,7 @@
                 <a
                   (click)="removeActiveClass()"
                   class="header-container-menu-list-item__link"
+                  [ngClass]="themeService.themeSignal()"
                   routerLink="/gallery"
                   routerLinkActive="active-link"
                   ariaCurrentWhenActive="page"
@@ -73,6 +92,7 @@
                 <a
                   (click)="removeActiveClass()"
                   class="header-container-menu-list-item__link"
+                  [ngClass]="themeService.themeSignal()"
                   routerLink="/about-us"
                   routerLinkActive="active-link"
                   ariaCurrentWhenActive="page"
@@ -86,6 +106,7 @@
                 <a
                   (click)="removeActiveClass()"
                   class="header-container-menu-list-item__link"
+                  [ngClass]="themeService.themeSignal()"
                   routerLink="/contact"
                   routerLinkActive="active-link"
                   ariaCurrentWhenActive="page"
@@ -93,10 +114,12 @@
                   >Контакти</a
                 >
               </li>
+              <button (click)="toggleTheme()">SWITCH THEME</button>
             </ul>
           </nav>
           <button
             class="hamburger hamburger-spring"
+            [ngClass]="themeService.themeSignal()"
             [class.is-active]="isActive"
             (click)="toggleNav()"
             aria-label="hamburger menu"

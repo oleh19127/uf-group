@@ -1,12 +1,19 @@
-import { Component, HostListener, Inject, Renderer2 } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Inject,
+  inject,
+  Renderer2,
+} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgClass } from '@angular/common';
 import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
+import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, ProgressiveImageComponent],
+  imports: [RouterLink, RouterLinkActive, ProgressiveImageComponent, NgClass],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -18,6 +25,12 @@ export class HeaderComponent {
     private render: Renderer2,
     @Inject(DOCUMENT) private document: Document,
   ) {}
+
+  themeService: ThemeService = inject(ThemeService);
+
+  toggleTheme() {
+    this.themeService.updateTheme();
+  }
 
   header = this.document.querySelector('.header');
 
