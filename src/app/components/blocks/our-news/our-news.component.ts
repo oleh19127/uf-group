@@ -2,22 +2,26 @@ import {
   AfterViewInit,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
+  inject,
   Inject,
 } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgClass } from '@angular/common';
 import { SwiperContainer } from 'swiper/swiper-element';
 import { SwiperOptions } from 'swiper/types';
 import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
+import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-our-news',
   standalone: true,
-  imports: [ProgressiveImageComponent],
+  imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './our-news.component.html',
   styleUrl: './our-news.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class OurNewsComponent implements AfterViewInit {
+  themeService: ThemeService = inject(ThemeService);
+
   slides = [1, 2];
 
   ourNewsSwiperSelector = '.our-news-swiper-container';

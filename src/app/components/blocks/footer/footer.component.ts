@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 import { RouterLink } from '@angular/router';
-import { NgOptimizedImage } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
+import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ProgressiveImageComponent, RouterLink, NgOptimizedImage],
+  imports: [ProgressiveImageComponent, RouterLink, NgOptimizedImage, NgClass],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  themeService: ThemeService = inject(ThemeService);
+}

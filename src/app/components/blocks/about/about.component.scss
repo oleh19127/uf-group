@@ -1,8 +1,12 @@
 @import '../../../../assets/styles/mixins/adaptive-font';
 @import '../../../../assets/styles/global-button';
 @import '../../../../assets/styles/block-padding';
+@import '../../../../assets/styles/dark-theme';
+@import '../../../../assets/styles/light-theme';
 
 .about {
+  background-color: $light-theme-background-color;
+
   .about-title-container {
     display: flex;
     justify-content: center;
@@ -11,8 +15,20 @@
       justify-content: flex-end;
     }
 
+    &.light-theme {
+      &__title {
+        color: $light-theme-color;
+      }
+    }
+
+    &.dark-theme {
+      &__title {
+        color: $dark-theme-color;
+      }
+    }
+
     &__title {
-      color: #0d0000;
+      transition: color 0.3s linear;
       font-weight: 600;
 
       @include adaptive-value('font-size', 40, 27, 0);
@@ -40,6 +56,10 @@
 
     .global-button {
       display: inline-flex;
+
+      &.light-theme {
+        background-color: #d9d2b0;
+      }
     }
   }
 }

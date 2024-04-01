@@ -3,7 +3,7 @@
     class="bg-intro-img"
     imageAlt="intro-bg"
     imagePriority="true"
-    imageUrl="images/intro/intro-background.jpg"
+    imageUrl="intro/intro-background.jpg"
     imageFill="true"
   ></app-progressive-image>
   <div class="container-fluid">
@@ -13,17 +13,34 @@
           <span>Фасади та Накладки: Ваш</span><span>Шлях до Затишку та</span
           ><span>сучасного Дизайну.</span>
         </h1>
-        <a (click)="goToTop()" routerLink="/contact" class="global-button">
+        <a
+          (click)="goToTop()"
+          [ngClass]="themeService.themeSignal()"
+          routerLink="/contact"
+          class="global-button"
+        >
           <span>Замовити розкрій</span>
-          <app-progressive-image
-            class="global-button-img"
-            imageAlt="global-button-arrow"
-            imagePriority="true"
-            imageUrl="images/global/global-button-arrow.svg"
-            imageWidth="32"
-            imageHeight="16"
-            imageFill="false"
-          ></app-progressive-image>
+          @if (this.themeService.themeSignal() === 'dark-theme') {
+            <app-progressive-image
+              class="global-button-img"
+              imageAlt="global-button-arrow"
+              imagePriority="true"
+              imageUrl="global/global-button-arrow-light-theme.svg"
+              imageWidth="32"
+              imageHeight="16"
+              imageFill="false"
+            ></app-progressive-image>
+          } @else {
+            <app-progressive-image
+              class="global-button-img"
+              imageAlt="global-button-arrow"
+              imagePriority="true"
+              imageUrl="global/global-button-arrow-dark-theme.svg"
+              imageWidth="32"
+              imageHeight="16"
+              imageFill="false"
+            ></app-progressive-image>
+          }
         </a>
       </div>
     </div>

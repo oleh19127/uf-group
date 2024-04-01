@@ -1,31 +1,63 @@
-<div class="footer">
+<div class="footer" [ngClass]="themeService.themeSignal()">
   <div class="container">
     <div class="row">
       <div class="col-12 col-xl-6">
         <div class="footer__left-side footer-left-side">
-          <div class="footer-left-side__logo">
+          <div
+            class="footer-left-side__logo"
+            [ngClass]="themeService.themeSignal()"
+          >
             <a routerLink="/home">
-              <app-progressive-image
-                imageUrl="images/header/logo.svg"
-                imageAlt="logo"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="202"
-                imageHeight="30"
-              ></app-progressive-image>
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="header-container-logo__img"
+                  imageUrl="header/logo-light-theme.svg"
+                  imageAlt="logo"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="202"
+                  imageHeight="30"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="header-container-logo__img"
+                  imageUrl="header/logo-dark-theme.svg"
+                  imageAlt="logo"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="202"
+                  imageHeight="30"
+                ></app-progressive-image>
+              }
               <h2>Ваш дім - наше мистецтво</h2>
             </a>
           </div>
-          <div class="footer-left-side__address">
-            <app-progressive-image
-              class="address-img"
-              imageUrl="images/footer/map-marker.svg"
-              imageAlt="map-marker"
-              imagePriority="false"
-              imageFill="false"
-              imageWidth="30"
-              imageHeight="30"
-            ></app-progressive-image>
+          <div
+            class="footer-left-side__address"
+            [ngClass]="themeService.themeSignal()"
+          >
+            @if (this.themeService.themeSignal() === 'dark-theme') {
+              <app-progressive-image
+                class="address-img"
+                imageUrl="footer/map-marker-light-theme.svg"
+                imageAlt="map-marker"
+                imagePriority="false"
+                imageFill="false"
+                imageWidth="30"
+                imageHeight="30"
+              ></app-progressive-image>
+            } @else {
+              <app-progressive-image
+                class="address-img"
+                imageUrl="footer/map-marker-dark-theme.svg"
+                imageAlt="map-marker"
+                imagePriority="false"
+                imageFill="false"
+                imageWidth="30"
+                imageHeight="30"
+              ></app-progressive-image>
+            }
+
             <span
               >Україна, Івано-Франківськ, с. Микитинці, вул. Марковеціка 3</span
             >
@@ -38,32 +70,59 @@
             <a
               href="mailto:elit.fasad&#64;hotmail.com"
               class="footer-right-side-social__item"
+              [ngClass]="themeService.themeSignal()"
             >
-              <app-progressive-image
-                class="footer-social-icon"
-                imageUrl="images/footer/email.svg"
-                imageAlt="email"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="30"
-                imageHeight="26"
-              ></app-progressive-image>
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="footer/email-light-theme.svg"
+                  imageAlt="email"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="30"
+                  imageHeight="26"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="footer/email-dark-theme.svg"
+                  imageAlt="email"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="30"
+                  imageHeight="26"
+                ></app-progressive-image>
+              }
               <p>elit.fasad&#64;hotmail.com</p>
             </a>
             <a
               href="https://www.instagram.com/elitfasad/"
               target="_blank"
               class="footer-right-side-social__item"
+              [ngClass]="themeService.themeSignal()"
             >
-              <app-progressive-image
-                class="footer-social-icon"
-                imageUrl="images/contact-us/instagram.svg"
-                imageAlt="instagram"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="54"
-                imageHeight="54"
-              ></app-progressive-image>
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="contact-us/instagram-light-theme.svg"
+                  imageAlt="instagram"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="54"
+                  imageHeight="54"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="contact-us/instagram-dark-theme.svg"
+                  imageAlt="instagram"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="54"
+                  imageHeight="54"
+                ></app-progressive-image>
+              }
+
               <p>&#64;elitfasad</p>
             </a>
           </div>
@@ -71,34 +130,65 @@
             <a
               href="tg://resolve?domain=+380973201371"
               class="footer-right-side-social__item"
+              [ngClass]="themeService.themeSignal()"
             >
-              <app-progressive-image
-                class="footer-social-icon"
-                imageUrl="images/contact-us/telegram.svg"
-                imageAlt="telegram"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="54"
-                imageHeight="54"
-              ></app-progressive-image>
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="contact-us/telegram-light-theme.svg"
+                  imageAlt="telegram"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="54"
+                  imageHeight="54"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="contact-us/telegram-dark-theme.svg"
+                  imageAlt="telegram"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="54"
+                  imageHeight="54"
+                ></app-progressive-image>
+              }
+
               <p>&#64;fasadu_nakladku</p>
             </a>
-            <a href="tel:+380973201371" class="footer-right-side-social__item">
-              <app-progressive-image
-                class="footer-social-icon"
-                imageUrl="images/footer/phone.svg"
-                imageAlt="phone"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="30"
-                imageHeight="30"
-              ></app-progressive-image>
+            <a
+              href="tel:+380973201371"
+              class="footer-right-side-social__item"
+              [ngClass]="themeService.themeSignal()"
+            >
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="footer/phone-light-theme.svg"
+                  imageAlt="phone"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="30"
+                  imageHeight="30"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="footer-social-icon"
+                  imageUrl="footer/phone-dark-theme.svg"
+                  imageAlt="phone"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="30"
+                  imageHeight="30"
+                ></app-progressive-image>
+              }
+
               <p>(068)-804-12-09</p>
             </a>
           </div>
         </div>
       </div>
-      <div class="col-12 copyright">
+      <div class="col-12 copyright" [ngClass]="themeService.themeSignal()">
         <span>© Elit-Fasad. 2024</span>
       </div>
     </div>

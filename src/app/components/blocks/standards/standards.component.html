@@ -1,8 +1,11 @@
-<div class="standards block-padding">
+<div class="standards block-padding" [ngClass]="themeService.themeSignal()">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="standards__title global-block-title">
+        <h2
+          class="standards__title global-block-title"
+          [ngClass]="themeService.themeSignal()"
+        >
           Дотримування стандартів
         </h2>
       </div>
@@ -18,17 +21,31 @@
               class="standards-block-container__block standards-block-container-block"
             >
               <div class="standards-block-container-block__icon">
-                <app-progressive-image
-                  imageUrl="images/standards/microscope.svg"
-                  imageAlt="microscope"
-                  imagePriority="false"
-                  imageFill="false"
-                  imageWidth="125"
-                  imageHeight="125"
-                ></app-progressive-image>
+                @if (this.themeService.themeSignal() === 'dark-theme') {
+                  <app-progressive-image
+                    imageUrl="standards/microscope-light-theme.svg"
+                    imageAlt="microscope"
+                    imagePriority="false"
+                    imageFill="false"
+                    imageWidth="125"
+                    imageHeight="125"
+                  ></app-progressive-image>
+                } @else {
+                  <app-progressive-image
+                    imageUrl="standards/microscope-dark-theme.svg"
+                    imageAlt="microscope"
+                    imagePriority="false"
+                    imageFill="false"
+                    imageWidth="125"
+                    imageHeight="125"
+                  ></app-progressive-image>
+                }
               </div>
 
-              <div class="standards-block-container-block__text">
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Всі наші меблі відповідають державним санітарно-епідеміологічним
                 вимогам
               </div>
@@ -36,16 +53,31 @@
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/natural-food.svg"
-                imageAlt="natural-food"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/natural-food-light-theme.svg"
+                  imageAlt="natural-food"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/natural-food-dark-theme.svg"
+                  imageAlt="natural-food"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Вся продукція Elit-Fasad є екологічно чистою та відповідає
                 світовим стандартам якості
               </div>
@@ -53,32 +85,64 @@
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/wet.svg"
-                imageAlt="wet"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/wet-light-theme.svg"
+                  imageAlt="wet"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/wet-dark-theme.svg"
+                  imageAlt="wet"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Внормована до вологого прибирання
               </div>
             </div>
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/protect.svg"
-                imageAlt="protect"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/protect-light-theme.svg"
+                  imageAlt="protect"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/protect-dark-theme.svg"
+                  imageAlt="protect"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Матеріали, що використовуються у виробництві меблів,
                 постачаються кращими виробниками України та Європи
               </div>
@@ -86,16 +150,32 @@
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/handmade.svg"
-                imageAlt="handmade"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/handmade-light-theme.svg"
+                  imageAlt="handmade"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/handmade-dark-theme.svg"
+                  imageAlt="handmade"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Забезпечення роботою в своїй країні та підтримка в скорішій
                 перемозі
               </div>
@@ -103,16 +183,32 @@
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/tools.svg"
-                imageAlt="tools"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/tools-light-theme.svg"
+                  imageAlt="tools"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/tools-dark-theme.svg"
+                  imageAlt="tools"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Наші меблі виготовляються як вручну, так і з використанням
                 сучасного високоточного обладнання та цифрового програмного
                 управління
@@ -121,48 +217,95 @@
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/interior-design.svg"
-                imageAlt="interior-design"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/interior-design-light-theme.svg"
+                  imageAlt="interior-design"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/interior-design-dark-theme.svg"
+                  imageAlt="interior-design"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Зробимо дизайн, який вам хочеться
               </div>
             </div>
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/first-place-ribbon.svg"
-                imageAlt="first-place-ribbon"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/first-place-ribbon-light-theme.svg"
+                  imageAlt="first-place-ribbon"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/first-place-ribbon-dark-theme.svg"
+                  imageAlt="first-place-ribbon"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Даємо гарантію якості та стійкості на нашу продукцію
               </div>
             </div>
             <div
               class="standards-block-container__block standards-block-container-block"
             >
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="images/standards/gear.svg"
-                imageAlt="gear"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-              <div class="standards-block-container-block__text">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/gear-light-theme.svg"
+                  imageAlt="gear"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/gear-dark-light-theme.svg"
+                  imageAlt="gear"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+              >
                 Наша продукція зручна та функціональна, адже ми продумуємо
                 найдрібніші деталі: практичне внутрішнє розділення та інші
                 функціональні особливості

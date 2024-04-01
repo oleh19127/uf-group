@@ -1,10 +1,20 @@
 @import 'mixins/adaptive-font';
+@import 'dark-theme';
+@import 'light-theme';
 
 .global-block-title {
-  color: #402e21;
+  transition: color 0.3s linear;
   font-weight: 700;
   margin-bottom: 25px;
   text-align: center;
+
+  &.light-theme {
+    color: $light-theme-color;
+  }
+
+  &.dark-theme {
+    color: $dark-theme-color;
+  }
 
   @media screen and (width >= 767px) {
     text-align: left;

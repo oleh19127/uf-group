@@ -1,8 +1,13 @@
-<div class="our-news block-padding">
+<div class="our-news block-padding" [ngClass]="themeService.themeSignal()">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="our-news__title global-block-title">Наші Новинки</h2>
+        <h2
+          class="our-news__title global-block-title"
+          [ngClass]="themeService.themeSignal()"
+        >
+          Наші Новинки
+        </h2>
       </div>
     </div>
   </div>
@@ -11,7 +16,7 @@
       <div class="col-12">
         <div class="our-news-swiper-button-prev">
           <app-progressive-image
-            imageUrl="images/slider/left-arrow.svg"
+            imageUrl="slider/left-arrow-dark-theme.svg"
             imageAlt="left-arrow"
             imageHeight="16"
             imageWidth="32"
@@ -21,7 +26,7 @@
         </div>
         <div class="our-news-swiper-button-next">
           <app-progressive-image
-            imageUrl="images/slider/right-arrow.svg"
+            imageUrl="slider/right-arrow-dark-theme.svg"
             imageAlt="right-arrow"
             imageHeight="16"
             imageWidth="32"
@@ -34,7 +39,7 @@
             @for (slide of slides; track slide) {
               <swiper-slide class="our-news-swiper-slide" [id]="slide">
                 <app-progressive-image
-                  imageUrl="images/our-news/news-slide.jpg"
+                  imageUrl="our-news/news-slide.jpg"
                   imageAlt="our-news-slide-image"
                   imageHeight="1000"
                   imageWidth="1628"
