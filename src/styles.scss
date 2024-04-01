@@ -5,8 +5,11 @@
 @import 'assets/styles/light-theme';
 @import 'assets/styles/dark-theme';
 
-.about,
-.services {
+.services,
+.our-news,
+.video,
+.standards,
+.how-to-find {
   transition: background-color 0.3s linear;
 
   &.light-theme {

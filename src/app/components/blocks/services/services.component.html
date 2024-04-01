@@ -1,8 +1,13 @@
-<div class="services block-padding">
+<div class="services block-padding" [ngClass]="themeService.themeSignal()">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h3 class="services__title global-block-title">Послуги</h3>
+        <h3
+          class="services__title global-block-title"
+          [ngClass]="themeService.themeSignal()"
+        >
+          Послуги
+        </h3>
       </div>
       @defer (on immediate) {
         <div class="col 12">
@@ -15,7 +20,7 @@
                       <p>Порізка</p>
                     </div>
                     <app-progressive-image
-                      imageUrl="images/services/cut-1.jpg"
+                      imageUrl="services/cut-1.jpg"
                       imageAlt="cut"
                       imageWidth="384"
                       imageHeight="550"
@@ -30,7 +35,7 @@
                       <p>Фрезерування</p>
                     </div>
                     <app-progressive-image
-                      imageUrl="images/services/milling-2.jpg"
+                      imageUrl="services/milling-2.jpg"
                       imageAlt="milling"
                       imageWidth="661"
                       imageHeight="550"
@@ -47,7 +52,7 @@
                       <p>Поклейка плівки</p>
                     </div>
                     <app-progressive-image
-                      imageUrl="images/services/gluing-the-film-3.jpg"
+                      imageUrl="services/gluing-the-film-3.jpg"
                       imageAlt="gluing-the-film"
                       imageWidth="661"
                       imageHeight="550"
@@ -62,7 +67,7 @@
                       <p>Кромкування</p>
                     </div>
                     <app-progressive-image
-                      imageUrl="images/services/edging-4.jpg"
+                      imageUrl="services/edging-4.jpg"
                       imageAlt="edging"
                       imageWidth="384"
                       imageHeight="550"
@@ -83,7 +88,7 @@
                       <p>Поклейка HPL-Пластика</p>
                     </div>
                     <app-progressive-image
-                      imageUrl="images/services/gluing-hpl-plastic-5.jpg"
+                      imageUrl="services/gluing-hpl-plastic-5.jpg"
                       imageAlt="gluing-hpl-plastic"
                       imageWidth="523"
                       imageHeight="349"
@@ -98,7 +103,7 @@
                       <p>Переробка фасадів</p>
                     </div>
                     <app-progressive-image
-                      imageUrl="images/services/processing-of-facades-6.jpg"
+                      imageUrl="services/processing-of-facades-6.jpg"
                       imageAlt="processing-of-facades"
                       imageWidth="523"
                       imageHeight="349"
@@ -113,7 +118,7 @@
                       <p>Фарбування</p>
                     </div>
                     <app-progressive-image
-                      imageUrl="images/services/dyeing-7.jpg"
+                      imageUrl="services/dyeing-7.jpg"
                       imageAlt="dyeing"
                       imageWidth="523"
                       imageHeight="372"

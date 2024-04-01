@@ -1,17 +1,31 @@
 @import 'mixins/adaptive-font';
+@import 'dark-theme';
+@import 'light-theme';
 
 .global-button {
-  background: #d9d2b0;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s linear;
+
+  &.light-theme {
+    background-color: $light-theme-background-color;
+
+    span {
+      color: $light-theme-color;
+    }
+  }
+
+  &.dark-theme {
+    background-color: $dark-theme-background-color;
+
+    span {
+      color: $dark-theme-color;
+    }
+  }
 
   &:hover {
-    span {
-      color: #593a28;
-    }
-
     .global-button-img {
       transform: scale(1.1);
     }
@@ -25,7 +39,6 @@
 
   span {
     margin-right: 15px;
-    color: #402e21;
     font-weight: 600;
     transition: all 0.3s linear;
 
