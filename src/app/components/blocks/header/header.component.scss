@@ -22,7 +22,6 @@
 
   &.min-header {
     height: 80px;
-    box-shadow: 0 0 11px 0 rgb(0 0 0 / 20%);
   }
 
   @media screen and (width <= 768px) {
@@ -42,21 +41,33 @@
     height: 100%;
     z-index: 50;
     transition: background-color 0.3s linear;
-
-    @media screen and (width <= 992px) {
-      box-shadow: 0 0 11px 0 rgb(0 0 0 / 20%);
-    }
   }
 
   &.light-theme {
+    &.min-header {
+      box-shadow: 0 0 11px 0 rgb(64 46 33 / 20%);
+    }
+
     &::before {
       background-color: $light-theme-background-color;
+
+      @media screen and (width <= 992px) {
+        box-shadow: 0 0 11px 0 rgb(64 46 33 / 20%);
+      }
     }
   }
 
   &.dark-theme {
     &::before {
       background-color: $dark-theme-background-color;
+
+      @media screen and (width <= 992px) {
+        box-shadow: 0 0 11px 0 rgb(242 237 220 / 20%);
+      }
+    }
+
+    &.min-header {
+      box-shadow: 0 0 11px 0 rgb(242 237 220 / 20%);
     }
   }
 }
