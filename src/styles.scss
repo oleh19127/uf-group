@@ -18,26 +18,26 @@
   &.light-theme {
     background-color: $light-theme-background-color;
 
-    &::before {
-      background-color: $dark-theme-background-color;
-    }
+    // &::before {
+    //   background-color: $dark-theme-background-color;background-colorbackground-colorbackground-colorbackground-colorbackground-colorbackground-colorbackground-colorbackground-color
+    // }
   }
 
   &.dark-theme {
     background-color: $dark-theme-background-color;
 
-    &::before {
-      background-color: $light-theme-background-color;
-    }
+    // &::before {
+    //   background-color: $light-theme-background-color;background-colorbackground-colorbackground-colorbackground-colorbackground-colorbackground-colorbackground-colorbackground-color
+    // }
   }
 
-  &::before {
-    transition: background-color 0.3s linear;
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-  }
+  // &::before {
+  //   transition: background-color 0.3s linear;transitiontransitiontransitiontransitiontransitiontransitiontransitiontransition
+  //   position: absolute;positionpositionpositionpositionpositionpositionpositionposition
+  //   content: '';contentcontentcontentcontentcontentcontentcontentcontent
+  //   left: 0;leftleftleftleftleftleftleftleft
+  //   bottom: 0;bottombottombottombottombottombottombottombottom
+  //   width: 100%;widthwidthwidthwidthwidthwidthwidthwidth
+  //   height: 1px;heightheightheightheightheightheightheightheight
+  // }
 }
