@@ -114,20 +114,47 @@
                   >Контакти</a
                 >
               </li>
-              <button (click)="toggleTheme()">SWITCH THEME</button>
             </ul>
           </nav>
-          <button
-            class="hamburger hamburger-spring"
-            [ngClass]="themeService.themeSignal()"
-            [class.is-active]="isActive"
-            (click)="toggleNav()"
-            aria-label="hamburger menu"
-          >
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
+          <div class="header-right-side">
+            <button
+              class="hamburger hamburger-spring"
+              [ngClass]="themeService.themeSignal()"
+              [class.is-active]="isActive"
+              (click)="toggleNav()"
+              aria-label="hamburger menu"
+            >
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </button>
+
+            <div class="theme-switcher">
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <button class="theme-switcher__icon" (click)="toggleTheme()">
+                  <app-progressive-image
+                    imageUrl="header/theme-switcher-light-mode.svg"
+                    imageAlt="theme-switcher-light-mode"
+                    imagePriority="true"
+                    imageFill="false"
+                    imageWidth="24"
+                    imageHeight="24"
+                  ></app-progressive-image>
+                </button>
+              } @else {
+                <button class="theme-switcher__icon" (click)="toggleTheme()">
+                  <app-progressive-image
+                    imageUrl="header/theme-switcher-dark-mode.svg"
+                    imageAlt="theme-switcher-dark-mode"
+                    imagePriority="true"
+                    imageFill="false"
+                    imageWidth="24"
+                    imageHeight="24"
+                  ></app-progressive-image>
+                </button>
+              }
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
