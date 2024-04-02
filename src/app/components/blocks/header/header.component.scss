@@ -175,6 +175,10 @@
 
   &:first-child {
     margin-left: 15px;
+
+    @media screen and (width <= 992px) {
+      margin-left: 0;
+    }
   }
 
   &__link {
