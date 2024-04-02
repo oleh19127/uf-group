@@ -9,14 +9,35 @@
 .our-news,
 .video,
 .standards,
-.how-to-find {
+.how-to-find,
+.hot-top,
+.contact-us {
+  position: relative;
   transition: background-color 0.3s linear;
 
   &.light-theme {
     background-color: $light-theme-background-color;
+
+    &::before {
+      background-color: $dark-theme-background-color;
+    }
   }
 
   &.dark-theme {
     background-color: $dark-theme-background-color;
+
+    &::before {
+      background-color: $light-theme-background-color;
+    }
+  }
+
+  &::before {
+    transition: background-color 0.3s linear;
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
   }
 }

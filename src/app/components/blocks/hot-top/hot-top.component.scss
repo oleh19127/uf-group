@@ -1,9 +1,10 @@
 @import '../../../../assets/styles/mixins/adaptive-font';
 @import '../../../../assets/styles/global-block-title';
 @import '../../../../assets/styles/block-padding';
+@import '../../../../assets/styles/dark-theme';
+@import '../../../../assets/styles/light-theme';
 
 .hot-top {
-  background: #fff;
   position: relative;
 
   .swiper-wrap {
@@ -62,7 +63,6 @@
       .slide-block-info {
         margin: 20px 0 40px;
         font-weight: 500;
-        color: #000;
 
         &__title {
           margin-bottom: 6px;
@@ -70,8 +70,17 @@
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 3;
           display: -webkit-box;
+          transition: color 0.3s linear;
 
           @include adaptive-value('font-size', 20, 18, 0);
+
+          &.light-theme {
+            color: $light-theme-color;
+          }
+
+          &.dark-theme {
+            color: $dark-theme-color;
+          }
         }
       }
 
@@ -106,7 +115,7 @@
 
     @media screen and (width >= 767px) {
       position: relative;
-      background: #f2eddc;
+      background: #d9d2b0;
       padding: 16.5px 17.5px;
       border-radius: 15px;
       display: flex;
