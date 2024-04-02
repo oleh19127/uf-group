@@ -1,8 +1,13 @@
-<div class="contact-us block-padding">
+<div class="contact-us block-padding" [ngClass]="themeService.themeSignal()">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="contact-us__title global-block-title">Зв’язатись з нами</h2>
+        <h2
+          class="contact-us__title global-block-title"
+          [ngClass]="themeService.themeSignal()"
+        >
+          Зв’язатись з нами
+        </h2>
       </div>
     </div>
   </div>

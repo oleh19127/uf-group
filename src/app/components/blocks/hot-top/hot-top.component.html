@@ -1,8 +1,13 @@
-<div class="hot-top block-padding">
+<div class="hot-top block-padding" [ngClass]="themeService.themeSignal()">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="hot-top__title global-block-title">Гарячий топ сезону</h2>
+        <h2
+          class="hot-top__title global-block-title"
+          [ngClass]="themeService.themeSignal()"
+        >
+          Гарячий топ сезону
+        </h2>
       </div>
     </div>
   </div>
@@ -17,12 +22,12 @@
                   <div class="slide-block">
                     <div class="slide-block__img slide-block-img">
                       <app-progressive-image
-                        imageHeight="250"
-                        imageWidth="385"
-                        imageFill="false"
+                        imageUrl="services/gluing-hpl-plastic-5.jpg"
+                        imageAlt="gluing-hpl-plastic"
+                        imageWidth="523"
+                        imageHeight="349"
                         imagePriority="false"
-                        imageAlt="hot-top-slide-placeholder"
-                        imageUrl="hot-top/hot-top-placeholder.jpg"
+                        imageFill="false"
                       ></app-progressive-image>
                       <div class="slide-block-img__code">
                         <span>код:</span>
@@ -40,7 +45,10 @@
                       </div>
                     </div>
                     <div class="slide-block__info slide-block-info">
-                      <h3 class="slide-block-info__title">
+                      <h3
+                        class="slide-block-info__title"
+                        [ngClass]="themeService.themeSignal()"
+                      >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Ullam similique alias molestiae asperiores deleniti
                         praesentium, rem quia nostrum ut, totam sapiente cumque
@@ -49,14 +57,25 @@
                       </h3>
                     </div>
                     <div class="slide-block__basket slide-block-basket">
-                      <app-progressive-image
-                        imageHeight="44"
-                        imageWidth="44"
-                        imageFill="false"
-                        imagePriority="false"
-                        imageAlt="basket-icon"
-                        imageUrl="hot-top/basket-icon-dark-theme.svg"
-                      ></app-progressive-image>
+                      @if (this.themeService.themeSignal() === 'dark-theme') {
+                        <app-progressive-image
+                          imageHeight="44"
+                          imageWidth="44"
+                          imageFill="false"
+                          imagePriority="false"
+                          imageAlt="basket-icon"
+                          imageUrl="hot-top/basket-icon-light-theme.svg"
+                        ></app-progressive-image>
+                      } @else {
+                        <app-progressive-image
+                          imageHeight="44"
+                          imageWidth="44"
+                          imageFill="false"
+                          imagePriority="false"
+                          imageAlt="basket-icon"
+                          imageUrl="hot-top/basket-icon-dark-theme.svg"
+                        ></app-progressive-image>
+                      }
                     </div>
                   </div>
                 </swiper-slide>

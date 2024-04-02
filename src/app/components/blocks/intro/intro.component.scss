@@ -36,6 +36,10 @@
     }
 
     .global-button {
+      &.light-theme {
+        background-color: #d9d2b0;
+      }
+
       position: absolute;
       right: 150px;
       bottom: 70px;
