@@ -149,15 +149,18 @@
 .header-container-menu-list {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
+  padding-top: 81px;
 
-  @media screen and (width <= 992px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 80px;
-    height: 100%;
+  @media screen and (width >= 769px) {
+    padding-top: 92px;
+  }
+
+  @media screen and (width >= 993px) {
+    flex-direction: row;
+    padding-top: 0;
   }
 }
 
@@ -229,13 +232,19 @@
   z-index: 51;
 
   .theme-switcher {
-    margin: 8px 0 0 20px;
+    margin: 8px 20px 0 0;
 
     @media screen and (width >= 993px) {
       margin: 6px 0 0;
     }
 
     &__icon {
+      app-progressive-image {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+      }
+
       &:hover {
         cursor: pointer;
       }

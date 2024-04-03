@@ -117,18 +117,6 @@
             </ul>
           </nav>
           <div class="header-right-side">
-            <button
-              class="hamburger hamburger-spring"
-              [ngClass]="themeService.themeSignal()"
-              [class.is-active]="isActive"
-              (click)="toggleNav()"
-              aria-label="hamburger menu"
-            >
-              <div class="hamburger-box">
-                <div class="hamburger-inner"></div>
-              </div>
-            </button>
-
             <div class="theme-switcher">
               @if (this.themeService.themeSignal() === 'dark-theme') {
                 <button class="theme-switcher__icon" (click)="toggleTheme()">
@@ -154,6 +142,17 @@
                 </button>
               }
             </div>
+            <button
+              class="hamburger hamburger-spring"
+              [ngClass]="themeService.themeSignal()"
+              [class.is-active]="isActive"
+              (click)="toggleNav()"
+              aria-label="hamburger menu"
+            >
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
