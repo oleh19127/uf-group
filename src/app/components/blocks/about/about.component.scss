@@ -30,8 +30,9 @@
     &__title {
       transition: color 0.3s linear;
       font-weight: 600;
+      text-transform: uppercase;
 
-      @include adaptive-value('font-size', 40, 27, 0);
+      @include adaptive-value('font-size', 35, 27, 0);
     }
   }
 
