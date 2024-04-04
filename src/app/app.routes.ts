@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'home',
-    title: 'Elit-Fasad',
+    title: 'UF-GROUP',
     loadComponent: () =>
       import('./components/pages/home/home.component').then(
         (m) => m.HomeComponent,
