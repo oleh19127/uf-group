@@ -5,7 +5,7 @@ import {
   inject,
   Inject,
 } from '@angular/core';
-import { DOCUMENT, NgClass } from '@angular/common';
+import { DOCUMENT, NgClass, NgOptimizedImage } from '@angular/common';
 import { SwiperContainer } from 'swiper/swiper-element';
 import { SwiperOptions } from 'swiper/types';
 import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
@@ -14,15 +14,13 @@ import { ThemeService } from '../../../services/theme.service';
 @Component({
   selector: 'app-hot-top',
   standalone: true,
-  imports: [ProgressiveImageComponent, NgClass],
+  imports: [ProgressiveImageComponent, NgClass, NgOptimizedImage],
   templateUrl: './hot-top.component.html',
   styleUrl: './hot-top.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HotTopComponent implements AfterViewInit {
   themeService: ThemeService = inject(ThemeService);
-
-  slides = [1, 2, 3, 4, 5];
 
   hotTopSwiperSelector = '.hot-top-swiper-container';
   hotTopSwiper: SwiperContainer | undefined;
