@@ -16,7 +16,7 @@
     "serve:ssr:front-end": "node dist/front-end/server/server.mjs"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "lint-staged": {
     "*": [
