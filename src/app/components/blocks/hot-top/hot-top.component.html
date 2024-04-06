@@ -17,6 +17,62 @@
         <div class="swiper-wrap">
           @defer (on immediate) {
             <swiper-container class="hot-top-swiper-container" init="false">
+              <swiper-slide class="hot-top-swiper-slide"
+                ><div class="slide-block">
+                  <div class="slide-block__img slide-block-img">
+                    <app-progressive-image
+                      imageUrl="hot-top/2.jpg"
+                      imageAlt="gluing-hpl-plastic"
+                      imageWidth="385"
+                      imageHeight="250"
+                      imagePriority="false"
+                      imageFill="false"
+                    ></app-progressive-image>
+                    <div class="slide-block-img__code">
+                      <span>код:</span>
+                      <span>8017</span>
+                    </div>
+                    <div class="slide-block-img__icon">
+                      <app-progressive-image
+                        imageHeight="50"
+                        imageWidth="50"
+                        imageFill="false"
+                        imagePriority="false"
+                        imageAlt="heart-icon"
+                        imageUrl="hot-top/heart-icon.svg"
+                      ></app-progressive-image>
+                    </div>
+                  </div>
+                  <div class="slide-block__info slide-block-info">
+                    <h3
+                      class="slide-block-info__title"
+                      [ngClass]="themeService.themeSignal()"
+                    >
+                      Фасади фарбовані “Шоколадно-коричневий колір”
+                    </h3>
+                  </div>
+                  <div class="slide-block__basket slide-block-basket">
+                    @if (this.themeService.themeSignal() === 'dark-theme') {
+                      <app-progressive-image
+                        imageHeight="44"
+                        imageWidth="44"
+                        imageFill="false"
+                        imagePriority="false"
+                        imageAlt="basket-icon"
+                        imageUrl="hot-top/basket-icon-light-theme.svg"
+                      ></app-progressive-image>
+                    } @else {
+                      <app-progressive-image
+                        imageHeight="44"
+                        imageWidth="44"
+                        imageFill="false"
+                        imagePriority="false"
+                        imageAlt="basket-icon"
+                        imageUrl="hot-top/basket-icon-dark-theme.svg"
+                      ></app-progressive-image>
+                    }
+                  </div></div
+              ></swiper-slide>
               <swiper-slide class="hot-top-swiper-slide">
                 <div class="slide-block">
                   <div class="slide-block__img slide-block-img">
@@ -131,62 +187,7 @@
                     }
                   </div></div
               ></swiper-slide>
-              <swiper-slide class="hot-top-swiper-slide"
-                ><div class="slide-block">
-                  <div class="slide-block__img slide-block-img">
-                    <app-progressive-image
-                      imageUrl="hot-top/2.jpg"
-                      imageAlt="gluing-hpl-plastic"
-                      imageWidth="385"
-                      imageHeight="250"
-                      imagePriority="false"
-                      imageFill="false"
-                    ></app-progressive-image>
-                    <div class="slide-block-img__code">
-                      <span>код:</span>
-                      <span>8017</span>
-                    </div>
-                    <div class="slide-block-img__icon">
-                      <app-progressive-image
-                        imageHeight="50"
-                        imageWidth="50"
-                        imageFill="false"
-                        imagePriority="false"
-                        imageAlt="heart-icon"
-                        imageUrl="hot-top/heart-icon.svg"
-                      ></app-progressive-image>
-                    </div>
-                  </div>
-                  <div class="slide-block__info slide-block-info">
-                    <h3
-                      class="slide-block-info__title"
-                      [ngClass]="themeService.themeSignal()"
-                    >
-                      Фасади фарбовані “Шоколадно-коричневий колір”
-                    </h3>
-                  </div>
-                  <div class="slide-block__basket slide-block-basket">
-                    @if (this.themeService.themeSignal() === 'dark-theme') {
-                      <app-progressive-image
-                        imageHeight="44"
-                        imageWidth="44"
-                        imageFill="false"
-                        imagePriority="false"
-                        imageAlt="basket-icon"
-                        imageUrl="hot-top/basket-icon-light-theme.svg"
-                      ></app-progressive-image>
-                    } @else {
-                      <app-progressive-image
-                        imageHeight="44"
-                        imageWidth="44"
-                        imageFill="false"
-                        imagePriority="false"
-                        imageAlt="basket-icon"
-                        imageUrl="hot-top/basket-icon-dark-theme.svg"
-                      ></app-progressive-image>
-                    }
-                  </div></div
-              ></swiper-slide>
+
               <swiper-slide class="hot-top-swiper-slide">
                 <div class="slide-block">
                   <div class="slide-block__img slide-block-img">
@@ -245,11 +246,12 @@
                   </div>
                 </div>
               </swiper-slide>
+
               <swiper-slide class="hot-top-swiper-slide">
                 <div class="slide-block">
                   <div class="slide-block__img slide-block-img">
                     <app-progressive-image
-                      imageUrl="hot-top/4.jpg"
+                      imageUrl="hot-top/5.jpg"
                       imageAlt="gluing-hpl-plastic"
                       imageWidth="385"
                       imageHeight="250"
@@ -276,8 +278,7 @@
                       class="slide-block-info__title"
                       [ngClass]="themeService.themeSignal()"
                     >
-                      Фасади з HPL- Пластиком “Горіх Сірий” та кромкуванням
-                      (19мм товщина)
+                      Фасади фарбовані “Очеретяно-зелений колір”
                     </h3>
                   </div>
                   <div class="slide-block__basket slide-block-basket">
