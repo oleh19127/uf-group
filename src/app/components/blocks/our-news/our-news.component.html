@@ -5,6 +5,7 @@
         <h2
           class="our-news__title global-block-title"
           [ngClass]="themeService.themeSignal()"
+          i18n
         >
           Наші Новинки
         </h2>
@@ -47,18 +48,18 @@
                   imageFill="false"
                 ></app-progressive-image>
                 <p class="our-news-swiper-slide__text">
-                  <span
+                  <span i18n
                     >В UF GROUP з’явився великий вибір декорів стільниць
                     PFLEIDERER.
                   </span>
-                  <span>Формат стільниці 4100*600 та 4100*1200</span>
-                  <span>Товщина 38мм </span>
+                  <span i18n>Формат стільниці 4100*600 та 4100*1200</span>
+                  <span i18n>Товщина 38мм </span>
                 </p>
               </swiper-slide>
             }
           </swiper-container>
         } @placeholder {
-          <h2 class="our-news__title global-block-title">Наші Новинки</h2>
+          <h2 class="our-news__title global-block-title" i18n>Наші Новинки</h2>
         }
       </div>
     </div>
