@@ -5,6 +5,7 @@
         <h2
           class="contact-us__title global-block-title"
           [ngClass]="themeService.themeSignal()"
+          i18n
         >
           Зв’язатись з нами
         </h2>
@@ -26,17 +27,18 @@
             <div class="contact-us__form contact-us-form">
               <div class="contact-us-form__container contact-us-form-container">
                 <form action="">
-                  <input type="text" placeholder="П.І.П." />
-                  <input type="text" placeholder="Номер телефону" />
+                  <input type="text" i18n placeholder="П.І.П." />
+                  <input type="text" i18n placeholder="Номер телефону" />
                   <textarea
+                    i18n
                     placeholder="Прорахунок? (Pобиться в міліметрах)"
                   ></textarea>
-                  <button type="submit">Отримати прорахунок</button>
+                  <button type="submit" i18n>Отримати прорахунок</button>
                 </form>
                 <div
                   class="contact-us-form-container__social contact-us-form-container-social"
                 >
-                  <div class="contact-us-form-container-social__title">
+                  <div class="contact-us-form-container-social__title" i18n>
                     Зв’язатись самому:
                   </div>
                   <div
@@ -48,7 +50,7 @@
                       <div
                         class="contact-us-form-container-social-info-text__phone"
                       >
-                        <span>Контакти:</span>
+                        <span i18n>Контакти:</span>
                         <a href="tel:+380960056863">(096)-005-68-63</a>
                       </div>
                       <div
@@ -110,6 +112,6 @@
       </div>
     </div>
   } @placeholder {
-    <h2 class="contact-us__title global-block-title">Зв’язатись з нами</h2>
+    <h2 class="contact-us__title global-block-title" i18n>Зв'язатись з нами</h2>
   }
 </div>

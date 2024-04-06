@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="ua" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4376566766976477291" datatype="html">
+        <source> - це вищий стандарт у сфері фасадів. Наша компанія вирізняється турботою про деталі, високоякісними матеріалами та індивідуальним підходом до кожного проекту. З нами ви отримуєте не просто продукти, а створюєте свій унікальний затишок за допомогою наших дизайнерів та майстрів. </source>
+        <target> - this is the highest standard in the field of facades. Our company is distinguished by attention to detail, high-quality materials and an individual approach to each project. With us, you get not just products, but create your own unique comfort with the help of our designers and craftsmen. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/about/about.component.html</context>
+          <context context-type="linenumber">14,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2586836536604664140" datatype="html">
+        <source>Дізнатись більше</source>
+        <target>Learn more</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/about/about.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5851646991519648826" datatype="html">
+        <source> Зв’язатись з нами </source>
+        <target> Contact us </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8796270779885276866" datatype="html">
+        <source>Отримати прорахунок</source>
+        <target>Get a miscalculation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="441497626091673560" datatype="html">
+        <source> Зв’язатись самому: </source>
+        <target> Contact yourself: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="618462455520637892" datatype="html">
+        <source>Контакти:</source>
+        <target>Contacts:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2035796509698088015" datatype="html">
+        <source>Зв&apos;язатись з нами</source>
+        <target>Contact us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">115,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4415787297056661976" datatype="html">
+        <source>Ваш дім - наше мистецтво</source>
+        <target>Your home is our art</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/footer/footer.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/preloader/preloader.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6375901103758452332" datatype="html">
+        <source>Україна, Івано-Франківськ, с. Микитинці, вул. Марковецька 3</source>
+        <target>Ukraine, Ivano-Frankivsk, village Mykytinsy, st. Markovetska 3</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/footer/footer.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7779648668940861161" datatype="html">
+        <source> Ваш дім - наше мистецтво </source>
+        <target> Your home is our art </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/header/header.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9122182835886103692" datatype="html">
+        <source>Головна</source>
+        <target>Main</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/header/header.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4587116239182374826" datatype="html">
+        <source>Каталог</source>
+        <target>Catalogue</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/header/header.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8958904336637265135" datatype="html">
+        <source>Галерея</source>
+        <target>Gallery</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/header/header.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2663122898086293723" datatype="html">
+        <source>Про нас</source>
+        <target>About us</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/header/header.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7140323882914164985" datatype="html">
+        <source>Контакти</source>
+        <target>Contacts</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/header/header.component.html</context>
+          <context context-type="linenumber">120,121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="42585733607791626" datatype="html">
+        <source> Гарячий топ сезону </source>
+        <target> Hot top of the season </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">316</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5587382843058355790" datatype="html">
+        <source>код:</source>
+        <target>code:</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">207,208</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">267,268</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5891735223510476288" datatype="html">
+        <source> Фасади фарбовані “Шоколадно-коричневий колір” </source>
+        <target> Facades are painted "Chocolate brown color" </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7939808991788054794" datatype="html">
+        <source> Стільниця Мармур в білих бризках. </source>
+        <target> Tabletop Marble in white splashes. </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3218148677621040916" datatype="html">
+        <source> Фасади з HPL- Пластиком “Дуб Натуральний” та кромкуванням (19мм товщина) </source>
+        <target> Facades with HPL-Plastic "Natural Oak" and edging (19 mm thick) </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">168,169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5929896269837120221" datatype="html">
+        <source> Фасади з HPL- Пластиком “Горіх Сірий” та кромкуванням (19мм товщина) </source>
+        <target> Facades with HPL-Plastic "Walnut Gray" and edging (19 mm thick) </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">227,228</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6084466677384431531" datatype="html">
+        <source> Фасади фарбовані “Очеретяно-зелений колір” </source>
+        <target> The facades are painted "reed-green color" </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/hot-top/hot-top.component.html</context>
+          <context context-type="linenumber">287</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1127646762227746525" datatype="html">
+        <source> Як нас знайти? </source>
+        <target> How to find us? </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/how-to-find-us/how-to-find-us.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2970317618864332164" datatype="html">
+        <source> Гугл карта </source>
+        <target> Google map </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/how-to-find-us/how-to-find-us.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6641900048137958743" datatype="html">
+        <source>Фасади - Ваш Шлях до</source>
+        <target>Facades - Your Way to</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/intro/intro.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1745714027040272968" datatype="html">
+        <source> Затишку та сучасного</source>
+        <target> Comfort and modern </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/intro/intro.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4781165400547367321" datatype="html">
+        <source>Дизайну.</source>
+        <target>Design.</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/intro/intro.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6392847118259964169" datatype="html">
+        <source>Замовити розкрій</source>
+        <target>Order cutting</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/intro/intro.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3353597188644529038" datatype="html">
+        <source> Наші Новинки </source>
+        <target> Our News </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/our-news/our-news.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8849593392246458914" datatype="html">
+        <source>В UF GROUP з’явився великий вибір декорів стільниць PFLEIDERER. </source>
+        <target>F GROUP gas a large selection of PFLEIDERER center top desors.</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/our-news/our-news.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5918186692632855372" datatype="html">
+        <source>Формат стільниці 4100*600 та 4100*1200</source>
+        <target>The desktop format is 4100*600 and 4100*1200</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/our-news/our-news.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6808812481107258179" datatype="html">
+        <source>Товщина 38мм </source>
+        <target>Thickness 38mm </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/our-news/our-news.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="717262369501300415" datatype="html">
+        <source>Наші Новинки</source>
+        <target>Our News</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/our-news/our-news.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5317787914251657626" datatype="html">
+        <source> Послуги </source>
+        <target> Services </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5458898694044039824" datatype="html">
+        <source>Порізка</source>
+        <target>Cut</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6007500703833943797" datatype="html">
+        <source>Фрезерування</source>
+        <target>Milling</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7849075747323961406" datatype="html">
+        <source>Поклейка плівки</source>
+        <target>Gluing the film</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1454615245493205407" datatype="html">
+        <source>Кромкування</source>
+        <target>Edging</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3621107229550831519" datatype="html">
+        <source>Поклейка HPL-Пластика</source>
+        <target>Gluing HPL-Plastic</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5797254783646050187" datatype="html">
+        <source>Переробка фасадів</source>
+        <target>Processing of facades</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5114199528196929300" datatype="html">
+        <source>Фарбування</source>
+        <target>Dyeing</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">119,120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4771297836703262927" datatype="html">
+        <source>Послуги</source>
+        <target>Services</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/services/services.component.html</context>
+          <context context-type="linenumber">136,137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5955578157307700578" datatype="html">
+        <source> Дотримування стандартів </source>
+        <target> Adherence to standards </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">291,292</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7111527292201412594" datatype="html">
+        <source> Відповідність державним санітарно-епідеміологічним вимогам </source>
+        <target> Compliance with state sanitary and epidemiological requirements </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5964296990807743503" datatype="html">
+        <source> Екологічно чиста та відповідає світовим стандартам якості </source>
+        <target> It is environmentally friendly and meets global quality standards </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7224985289703033057" datatype="html">
+        <source> Внормована стійкість до вологого прибирання та різних водних умов </source>
+        <target> Normalized resistance to wet cleaning and various water conditions </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9051976800870973676" datatype="html">
+        <source> Матеріали постачаються кращими виробниками України та Європи </source>
+        <target> The materials are supplied by the best manufacturers of Ukraine and Europe </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="156685305434980489" datatype="html">
+        <source> Фасади виготовляються з високоточного сучасного обладнання </source>
+        <target> Facades are made of high-precision modern equipment </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="669877303605456069" datatype="html">
+        <source> Зробимо дизайн, який вам хочеться </source>
+        <target> We will make the design you want </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5397785582701917941" datatype="html">
+        <source> Даємо гарантію якості та стійкості на нашу продукцію </source>
+        <target> We guarantee the quality and durability of our products </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">250</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6677685409959799709" datatype="html">
+        <source> Наша продукція зручна та функціональна </source>
+        <target> Our products are convenient and functional </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/standards/standards.component.html</context>
+          <context context-type="linenumber">282</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3827206555579431779" datatype="html">
+        <source> Відео </source>
+        <target> Video </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/video/video.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2768538519711126161" datatype="html">
+        <source>Відео</source>
+        <target> Video </target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/blocks/video/video.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

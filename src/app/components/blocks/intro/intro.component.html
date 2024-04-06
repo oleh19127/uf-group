@@ -10,8 +10,8 @@
     <div class="row">
       <div class="col-12">
         <h1 class="intro__title">
-          <span>Фасади - Ваш Шлях до</span><span> Затишку та сучасного</span
-          ><span>Дизайну.</span>
+          <span i18n>Фасади - Ваш Шлях до</span
+          ><span i18n> Затишку та сучасного</span><span i18n>Дизайну.</span>
         </h1>
         <a
           (click)="goToTop()"
@@ -19,7 +19,7 @@
           routerLink="/contact"
           class="global-button"
         >
-          <span>Замовити розкрій</span>
+          <span i18n>Замовити розкрій</span>
           @if (this.themeService.themeSignal() === 'dark-theme') {
             <app-progressive-image
               class="global-button-img"

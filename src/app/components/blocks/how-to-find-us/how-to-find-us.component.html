@@ -5,6 +5,7 @@
         <h2
           class="how-to-find__title global-block-title"
           [ngClass]="themeService.themeSignal()"
+          i18n
         >
           Як нас знайти?
         </h2>
@@ -24,7 +25,9 @@
               title="Google Map"
             ></iframe>
           } @placeholder {
-            <h2 class="how-to-find__title global-block-title">Google map</h2>
+            <h2 class="how-to-find__title global-block-title" i18n>
+              Гугл карта
+            </h2>
           }
         </div>
       </div>
