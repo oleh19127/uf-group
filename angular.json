@@ -5,7 +5,7 @@
   "projects": {
     "front-end": {
       "i18n": {
-        "sourceLocale": "ua",
+        "sourceLocale": "uk",
         "locales": {
           "en": "src/locale/messages.en.xlf"
         }
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize": ["ua", "en"],
+            "localize": ["uk", "en"],
             "outputPath": "dist/front-end",
             "index": "src/index.html",
             "browser": "src/main.ts",
