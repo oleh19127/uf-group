@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "local-server": "npm run build && npx serve dist/front-end/browser",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --localize",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "format": "npx prettier --write .",
@@ -79,7 +78,6 @@
     "lint-staged": "^15.2.2",
     "postcss-scss": "^4.0.9",
     "prettier": "3.2.5",
-    "serve": "^14.2.1",
     "stylelint": "^16.3.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.1.0",

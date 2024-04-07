@@ -3,6 +3,7 @@ import {
   HostListener,
   Inject,
   inject,
+  OnInit,
   Renderer2,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -17,10 +18,13 @@ import { ThemeService } from '../../../services/theme.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   bodyClass = 'lock';
   isActive = false;
   minHeader = 'min-header';
+  headerClass = '.header';
+  headerSelector: HTMLElement | undefined;
+
   constructor(
     private render: Renderer2,
     @Inject(DOCUMENT) private document: Document,
@@ -32,18 +36,22 @@ export class HeaderComponent {
     this.themeService.updateTheme();
   }
 
-  header = this.document.querySelector('.header');
+  ngOnInit() {
+    this.headerSelector = this.document.querySelector(
+      this.headerClass,
+    ) as HTMLElement;
+  }
 
   @HostListener('window:scroll')
   OnWindowScroll() {
-    if (this.header) {
+    if (this.headerSelector) {
       if (
         this.document.body.scrollTop >= 30 ||
         this.document.documentElement.scrollTop >= 30
       ) {
-        this.render.addClass(this.header, this.minHeader);
+        this.render.addClass(this.headerSelector, this.minHeader);
       } else {
-        this.render.removeClass(this.header, this.minHeader);
+        this.render.removeClass(this.headerSelector, this.minHeader);
       }
     }
   }
