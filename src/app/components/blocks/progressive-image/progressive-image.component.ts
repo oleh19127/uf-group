@@ -18,5 +18,5 @@ export class ProgressiveImageComponent {
   imagePriority!: boolean;
   @Input({ transform: booleanAttribute, required: true })
   imageFill!: boolean;
-  imageSrcset = '640w, 750w, 828w, 1080w, 1200w, 1920w, 2048w, 3840w';
+  imageSrcset = '576w, 768w, 992w, 1200w, 1400w, 1920w, 2048w, 3840w';
 }
