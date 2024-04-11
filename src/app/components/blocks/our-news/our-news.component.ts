@@ -22,8 +22,6 @@ import { ThemeService } from '../../../services/theme.service';
 export class OurNewsComponent implements AfterViewInit {
   themeService: ThemeService = inject(ThemeService);
 
-  slides = [1, 2];
-
   ourNewsSwiperSelector = '.our-news-swiper-container';
   ourNewsSwiper: SwiperContainer | undefined;
 

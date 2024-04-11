@@ -113,13 +113,24 @@
     .col-12 {
       position: relative;
       margin-bottom: 20px;
+      max-height: 349px !important;
+
+      @media screen and (width >= 768px) {
+        max-height: 137px !important;
+      }
+
+      @media screen and (width >= 992px) {
+        max-height: 188px !important;
+      }
 
       @media screen and (width >= 1200px) {
         margin-bottom: 25px;
+        max-height: 226.5px !important;
       }
 
       @media screen and (width >= 1400px) {
         margin-bottom: 30px;
+        max-height: 265.5px !important;
       }
 
       &:last-child {

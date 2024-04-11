@@ -3,7 +3,6 @@ import { IntroComponent } from '../../blocks/intro/intro.component';
 import { AboutComponent } from '../../blocks/about/about.component';
 import { ServicesComponent } from '../../blocks/services/services.component';
 import { OurNewsComponent } from '../../blocks/our-news/our-news.component';
-import { VideoComponent } from '../../blocks/video/video.component';
 import { ContactUsComponent } from '../../blocks/contact-us/contact-us.component';
 import { StandardsComponent } from '../../blocks/standards/standards.component';
 import { HotTopComponent } from '../../blocks/hot-top/hot-top.component';
@@ -18,7 +17,6 @@ import { FooterComponent } from '../../blocks/footer/footer.component';
     AboutComponent,
     ServicesComponent,
     OurNewsComponent,
-    VideoComponent,
     ContactUsComponent,
     StandardsComponent,
     HotTopComponent,
