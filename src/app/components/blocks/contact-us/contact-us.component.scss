@@ -151,7 +151,7 @@
       border-radius: 10px;
       color: #d9d2b0;
       background: #593a28;
-      padding: 24px 63px;
+      padding: 24px 31.5px;
       transition: all 0.3s linear;
       font-weight: 500;
       margin-bottom: 35px;
@@ -165,6 +165,7 @@
 
       @media screen and (width >= 992px) {
         margin-bottom: 50px;
+        padding: 24px 63px;
       }
     }
   }
