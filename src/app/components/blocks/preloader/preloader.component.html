@@ -1,13 +1,25 @@
-<div class="loading-screen">
-  <app-progressive-image
-    class="header-container-logo__img"
-    imageUrl="header/logo-dark-theme.svg"
-    imageAlt="logo"
-    imagePriority="true"
-    imageFill="false"
-    imageWidth="202"
-    imageHeight="30"
-  ></app-progressive-image>
-  <h2 i18n>Ваш дім - наше мистецтво</h2>
-  <div class="loader"></div>
+<div class="loading-screen" [ngClass]="themeService.themeSignal()">
+  @if (themeService.themeSignal() === 'dark-theme') {
+    <app-progressive-image
+      class="header-container-logo__img"
+      imageUrl="header/logo-light-theme.svg"
+      imageAlt="logo"
+      imagePriority="true"
+      imageFill="false"
+      imageWidth="202"
+      imageHeight="30"
+    ></app-progressive-image>
+  } @else {
+    <app-progressive-image
+      class="header-container-logo__img"
+      imageUrl="header/logo-dark-theme.svg"
+      imageAlt="logo"
+      imagePriority="true"
+      imageFill="false"
+      imageWidth="202"
+      imageHeight="30"
+    ></app-progressive-image>
+  }
+  <h2 [ngClass]="themeService.themeSignal()" i18n>Ваш дім - наше мистецтво</h2>
+  <div [ngClass]="themeService.themeSignal()" class="loader"></div>
 </div>
