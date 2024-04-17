@@ -1,4 +1,6 @@
 @import '../../../../assets/styles/mixins/adaptive-font';
+@import '../../../../assets/styles/dark-theme';
+@import '../../../../assets/styles/light-theme';
 
 .loading-screen {
   position: fixed;
@@ -7,31 +9,54 @@
   width: 100%;
   height: 100vh;
   z-index: 1000;
-  background: #f2eddc;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: background-color 0.3s linear;
+
+  &.light-theme {
+    background-color: $light-theme-background-color;
+  }
+
+  &.dark-theme {
+    background-color: $dark-theme-background-color;
+  }
 
   h2 {
     @include adaptive-value('font-size', 20, 18, 0);
 
     margin: 15px 0;
+
+    &.light-theme {
+      color: $light-theme-color;
+    }
+
+    &.dark-theme {
+      color: $dark-theme-color;
+    }
   }
 }
 
 .loader {
   width: 40px;
   aspect-ratio: 1;
-
-  --c: linear-gradient(#402e21 0 0);
-  --r1: radial-gradient(farthest-side at bottom, #402e21 93%, #402e21);
-  --r2: radial-gradient(farthest-side at top, #402e21 93%, #402e21);
-
   background: var(--c), var(--r1), var(--r2), var(--c), var(--r1), var(--r2),
     var(--c), var(--r1), var(--r2);
   background-repeat: no-repeat;
   animation: l1 1s infinite alternate;
+
+  &.light-theme {
+    --c: linear-gradient(#402e21 0 0);
+    --r1: radial-gradient(farthest-side at bottom, #402e21 93%, #402e21);
+    --r2: radial-gradient(farthest-side at top, #402e21 93%, #402e21);
+  }
+
+  &.dark-theme {
+    --c: linear-gradient(#f2eddc 0 0);
+    --r1: radial-gradient(farthest-side at bottom, #f2eddc 93%, #f2eddc);
+    --r2: radial-gradient(farthest-side at top, #f2eddc 93%, #f2eddc);
+  }
 }
 
 @keyframes l1 {

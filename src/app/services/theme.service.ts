@@ -1,10 +1,30 @@
-import { Injectable, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID, effect, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  themeSignal = signal<string>('light-theme');
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {
+    effect(() => {
+      if (isPlatformBrowser(this.platformId)) {
+        window.localStorage.setItem(
+          'themeSignal',
+          JSON.stringify(this.themeSignal()),
+        );
+      }
+    });
+  }
+
+  themeSignal = signal<string>(this.parseLocalStorage());
+
+  parseLocalStorage() {
+    if (isPlatformBrowser(this.platformId)) {
+      return JSON.parse(
+        window.localStorage.getItem('themeSignal') ?? '"light-theme"',
+      );
+    }
+  }
 
   setTheme(theme: string) {
     this.themeSignal.set(theme);
