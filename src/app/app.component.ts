@@ -8,25 +8,18 @@ import {
 
 import { fade } from './animations/fade';
 import { PreloaderComponent } from './components/blocks/preloader/preloader.component';
-import { DOCUMENT, NgClass } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 import { HeaderComponent } from './components/blocks/header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    RouterLink,
-    PreloaderComponent,
-    NgClass,
-    HeaderComponent,
-  ],
+  imports: [RouterOutlet, RouterLink, PreloaderComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [fade],
 })
 export class AppComponent {
-  loading = true;
   bodyLockClass = 'lock';
 
   constructor(
@@ -41,7 +34,6 @@ export class AppComponent {
     if (hasClass) {
       this.renderer.removeClass(this.document.body, this.bodyLockClass);
     }
-    this.loading = false;
   }
 
   getRouteAnimationData() {

@@ -1,9 +1,10 @@
 <div class="app">
-  <app-header></app-header>
-  <div [@routeAnimations]="getRouteAnimationData()">
-    <router-outlet></router-outlet>
-  </div>
-  <div [ngClass]="{ none: !loading }">
+  @defer {
+    <app-header></app-header>
+    <div [@routeAnimations]="getRouteAnimationData()">
+      <router-outlet></router-outlet>
+    </div>
+  } @loading (minimum 300ms) {
     <app-preloader></app-preloader>
-  </div>
+  }
 </div>
