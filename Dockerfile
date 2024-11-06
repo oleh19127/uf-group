@@ -1,5 +1,5 @@
 # Global options
-ARG NODE_VERSION=18.20.0
+ARG NODE_VERSION=22.11.0
 FROM node:${NODE_VERSION}-alpine as base
 RUN npm update -g
 RUN npm i -g @angular/cli
