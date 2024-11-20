@@ -13,7 +13,6 @@ import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-hot-top',
-  standalone: true,
   imports: [ProgressiveImageComponent, NgClass, NgOptimizedImage],
   templateUrl: './hot-top.component.html',
   styleUrl: './hot-top.component.scss',

@@ -13,7 +13,6 @@ import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   imports: [RouterLink, RouterLinkActive, ProgressiveImageComponent, NgClass],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

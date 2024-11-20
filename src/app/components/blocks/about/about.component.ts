@@ -6,7 +6,6 @@ import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-about',
-  standalone: true,
   imports: [RouterLink, ProgressiveImageComponent, NgClass],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',

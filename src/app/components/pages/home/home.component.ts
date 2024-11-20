@@ -12,7 +12,6 @@ import { VideoComponent } from '../../blocks/video/video.component';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [
     IntroComponent,
     AboutComponent,

@@ -5,7 +5,6 @@ import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-video',
-  standalone: true,
   imports: [YouTubePlayer, NgClass],
   templateUrl: './video.component.html',
   styleUrl: './video.component.scss',

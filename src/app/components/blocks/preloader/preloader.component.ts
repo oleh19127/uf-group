@@ -5,7 +5,6 @@ import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-preloader',
-  standalone: true,
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './preloader.component.html',
   styleUrl: './preloader.component.scss',
