@@ -4,7 +4,6 @@ import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-how-to-find-us',
-  standalone: true,
   imports: [NgClass],
   templateUrl: './how-to-find-us.component.html',
   styleUrl: './how-to-find-us.component.scss',

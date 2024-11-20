@@ -13,7 +13,6 @@ import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-our-news',
-  standalone: true,
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './our-news.component.html',
   styleUrl: './our-news.component.scss',

@@ -6,7 +6,6 @@ import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-footer',
-  standalone: true,
   imports: [ProgressiveImageComponent, RouterLink, NgOptimizedImage, NgClass],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',

@@ -13,7 +13,6 @@ import { HeaderComponent } from './components/blocks/header/header.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [RouterOutlet, RouterLink, PreloaderComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

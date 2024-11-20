@@ -5,7 +5,6 @@ import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-standards',
-  standalone: true,
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './standards.component.html',
   styleUrl: './standards.component.scss',
