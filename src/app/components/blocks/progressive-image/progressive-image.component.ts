@@ -4,7 +4,7 @@ import { NgOptimizedImage, provideImgixLoader } from '@angular/common';
 @Component({
   selector: 'app-progressive-image',
   imports: [NgOptimizedImage],
-  providers: [provideImgixLoader('https://oberon-669224119.imgix.net')],
+  providers: [provideImgixLoader('https://oberon-356672186.imgix.net')],
   templateUrl: './progressive-image.component.html',
   styleUrl: './progressive-image.component.scss',
 })
