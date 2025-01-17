@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ProgressiveImageComponent } from '../progressive-image/progressive-image.component';
 import { RouterLink } from '@angular/router';
-import { NgClass, NgOptimizedImage } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { ThemeService } from '../../../services/theme.service';
 
 @Component({
   selector: 'app-footer',
-  imports: [ProgressiveImageComponent, RouterLink, NgOptimizedImage, NgClass],
+  imports: [ProgressiveImageComponent, RouterLink, NgClass],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
