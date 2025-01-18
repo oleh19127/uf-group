@@ -25,6 +25,6 @@ import { VideoComponent } from '../../blocks/video/video.component';
     VideoComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {}

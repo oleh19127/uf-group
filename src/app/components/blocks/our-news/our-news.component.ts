@@ -15,7 +15,7 @@ import { ThemeService } from '../../../services/theme.service';
   selector: 'app-our-news',
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './our-news.component.html',
-  styleUrl: './our-news.component.scss',
+  styleUrls: ['./our-news.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class OurNewsComponent implements AfterViewInit {

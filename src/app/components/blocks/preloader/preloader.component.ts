@@ -7,7 +7,7 @@ import { NgClass } from '@angular/common';
   selector: 'app-preloader',
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './preloader.component.html',
-  styleUrl: './preloader.component.scss',
+  styleUrls: ['./preloader.component.scss'],
 })
 export class PreloaderComponent {
   themeService: ThemeService = inject(ThemeService);

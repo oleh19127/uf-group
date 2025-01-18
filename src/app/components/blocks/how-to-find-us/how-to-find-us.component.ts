@@ -6,7 +6,7 @@ import { NgClass } from '@angular/common';
   selector: 'app-how-to-find-us',
   imports: [NgClass],
   templateUrl: './how-to-find-us.component.html',
-  styleUrl: './how-to-find-us.component.scss',
+  styleUrls: ['./how-to-find-us.component.scss'],
 })
 export class HowToFindUsComponent {
   themeService: ThemeService = inject(ThemeService);

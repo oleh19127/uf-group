@@ -8,7 +8,7 @@ import { NgClass } from '@angular/common';
   selector: 'app-intro',
   imports: [ProgressiveImageComponent, RouterLink, NgClass],
   templateUrl: './intro.component.html',
-  styleUrl: './intro.component.scss',
+  styleUrls: ['./intro.component.scss'],
 })
 export class IntroComponent {
   themeService: ThemeService = inject(ThemeService);

@@ -7,7 +7,7 @@ import { NgClass } from '@angular/common';
   selector: 'app-contact-us',
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './contact-us.component.html',
-  styleUrl: './contact-us.component.scss',
+  styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent {
   themeService: ThemeService = inject(ThemeService);

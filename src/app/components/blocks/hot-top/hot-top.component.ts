@@ -15,7 +15,7 @@ import { ThemeService } from '../../../services/theme.service';
   selector: 'app-hot-top',
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './hot-top.component.html',
-  styleUrl: './hot-top.component.scss',
+  styleUrls: ['./hot-top.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HotTopComponent implements AfterViewInit {

@@ -6,7 +6,7 @@ import { NgOptimizedImage, provideImgixLoader } from '@angular/common';
   imports: [NgOptimizedImage],
   providers: [provideImgixLoader('https://oberon-356672186.imgix.net')],
   templateUrl: './progressive-image.component.html',
-  styleUrl: './progressive-image.component.scss',
+  styleUrls: ['./progressive-image.component.scss'],
 })
 export class ProgressiveImageComponent {
   @Input({ required: true }) imageUrl!: string;
