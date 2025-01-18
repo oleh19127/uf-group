@@ -13,19 +13,52 @@
     </div>
   </div>
 
-  <!-- @defer (on idle) { -->
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="standards-block__container standards-block-container">
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            <div class="standards-block-container-block__icon">
+  @defer (hydrate on viewport) {
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="standards-block__container standards-block-container">
+            <div
+              class="standards-block-container__block standards-block-container-block"
+            >
+              <div class="standards-block-container-block__icon">
+                @if (this.themeService.themeSignal() === 'dark-theme') {
+                  <app-progressive-image
+                    imageUrl="standards/microscope-light-theme.svg"
+                    imageAlt="microscope"
+                    imagePriority="false"
+                    imageFill="false"
+                    imageWidth="125"
+                    imageHeight="125"
+                  ></app-progressive-image>
+                } @else {
+                  <app-progressive-image
+                    imageUrl="standards/microscope-dark-theme.svg"
+                    imageAlt="microscope"
+                    imagePriority="false"
+                    imageFill="false"
+                    imageWidth="125"
+                    imageHeight="125"
+                  ></app-progressive-image>
+                }
+              </div>
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Відповідність державним санітарно-епідеміологічним вимогам
+              </div>
+            </div>
+            <div
+              class="standards-block-container__block standards-block-container-block"
+            >
               @if (this.themeService.themeSignal() === 'dark-theme') {
                 <app-progressive-image
-                  imageUrl="standards/microscope-light-theme.svg"
-                  imageAlt="microscope"
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/natural-food-light-theme.svg"
+                  imageAlt="natural-food"
                   imagePriority="false"
                   imageFill="false"
                   imageWidth="125"
@@ -33,261 +66,229 @@
                 ></app-progressive-image>
               } @else {
                 <app-progressive-image
-                  imageUrl="standards/microscope-dark-theme.svg"
-                  imageAlt="microscope"
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/natural-food-dark-theme.svg"
+                  imageAlt="natural-food"
                   imagePriority="false"
                   imageFill="false"
                   imageWidth="125"
                   imageHeight="125"
                 ></app-progressive-image>
               }
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Екологічно чиста та відповідає світовим стандартам якості
+              </div>
+            </div>
+            <div
+              class="standards-block-container__block standards-block-container-block"
+            >
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/wet-light-theme.svg"
+                  imageAlt="wet"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/wet-dark-theme.svg"
+                  imageAlt="wet"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Внормована стійкість до вологого прибирання та різних водних
+                умов
+              </div>
+            </div>
+            <div
+              class="standards-block-container__block standards-block-container-block"
+            >
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/protect-light-theme.svg"
+                  imageAlt="protect"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/protect-dark-theme.svg"
+                  imageAlt="protect"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Матеріали постачаються кращими виробниками України та Європи
+              </div>
             </div>
 
             <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
+              class="standards-block-container__block standards-block-container-block"
             >
-              Відповідність державним санітарно-епідеміологічним вимогам
-            </div>
-          </div>
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            @if (this.themeService.themeSignal() === 'dark-theme') {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/natural-food-light-theme.svg"
-                imageAlt="natural-food"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            } @else {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/natural-food-dark-theme.svg"
-                imageAlt="natural-food"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            }
-            <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
-            >
-              Екологічно чиста та відповідає світовим стандартам якості
-            </div>
-          </div>
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            @if (this.themeService.themeSignal() === 'dark-theme') {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/wet-light-theme.svg"
-                imageAlt="wet"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            } @else {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/wet-dark-theme.svg"
-                imageAlt="wet"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            }
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/tools-light-theme.svg"
+                  imageAlt="tools"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/tools-dark-theme.svg"
+                  imageAlt="tools"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
 
-            <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
-            >
-              Внормована стійкість до вологого прибирання та різних водних умов
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Фасади виготовляються з високоточного сучасного обладнання
+              </div>
             </div>
-          </div>
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            @if (this.themeService.themeSignal() === 'dark-theme') {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/protect-light-theme.svg"
-                imageAlt="protect"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            } @else {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/protect-dark-theme.svg"
-                imageAlt="protect"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            }
-
             <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
+              class="standards-block-container__block standards-block-container-block"
             >
-              Матеріали постачаються кращими виробниками України та Європи
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/interior-design-light-theme.svg"
+                  imageAlt="interior-design"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/interior-design-dark-theme.svg"
+                  imageAlt="interior-design"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Зробимо дизайн, який вам хочеться
+              </div>
             </div>
-          </div>
-
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            @if (this.themeService.themeSignal() === 'dark-theme') {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/tools-light-theme.svg"
-                imageAlt="tools"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            } @else {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/tools-dark-theme.svg"
-                imageAlt="tools"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            }
-
             <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
+              class="standards-block-container__block standards-block-container-block"
             >
-              Фасади виготовляються з високоточного сучасного обладнання
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/first-place-ribbon-light-theme.svg"
+                  imageAlt="first-place-ribbon"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/first-place-ribbon-dark-theme.svg"
+                  imageAlt="first-place-ribbon"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Даємо гарантію якості та стійкості на нашу продукцію
+              </div>
             </div>
-          </div>
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            @if (this.themeService.themeSignal() === 'dark-theme') {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/interior-design-light-theme.svg"
-                imageAlt="interior-design"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            } @else {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/interior-design-dark-theme.svg"
-                imageAlt="interior-design"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            }
-
             <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
+              class="standards-block-container__block standards-block-container-block"
             >
-              Зробимо дизайн, який вам хочеться
-            </div>
-          </div>
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            @if (this.themeService.themeSignal() === 'dark-theme') {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/first-place-ribbon-light-theme.svg"
-                imageAlt="first-place-ribbon"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            } @else {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/first-place-ribbon-dark-theme.svg"
-                imageAlt="first-place-ribbon"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            }
-
-            <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
-            >
-              Даємо гарантію якості та стійкості на нашу продукцію
-            </div>
-          </div>
-          <div
-            class="standards-block-container__block standards-block-container-block"
-          >
-            @if (this.themeService.themeSignal() === 'dark-theme') {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/gear-light-theme.svg"
-                imageAlt="gear"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            } @else {
-              <app-progressive-image
-                class="standards-block-container-block__icon"
-                imageUrl="standards/gear-dark-theme.svg"
-                imageAlt="gear"
-                imagePriority="false"
-                imageFill="false"
-                imageWidth="125"
-                imageHeight="125"
-              ></app-progressive-image>
-            }
-            <div
-              class="standards-block-container-block__text"
-              [ngClass]="themeService.themeSignal()"
-              i18n
-            >
-              Наша продукція зручна та функціональна
+              @if (this.themeService.themeSignal() === 'dark-theme') {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/gear-light-theme.svg"
+                  imageAlt="gear"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              } @else {
+                <app-progressive-image
+                  class="standards-block-container-block__icon"
+                  imageUrl="standards/gear-dark-theme.svg"
+                  imageAlt="gear"
+                  imagePriority="false"
+                  imageFill="false"
+                  imageWidth="125"
+                  imageHeight="125"
+                ></app-progressive-image>
+              }
+              <div
+                class="standards-block-container-block__text"
+                [ngClass]="themeService.themeSignal()"
+                i18n
+              >
+                Наша продукція зручна та функціональна
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- } @placeholder { -->
-  <!-- <h2 class="standards__title global-block-title" i18n> -->
-  <!-- Дотримування стандартів -->
-  <!-- </h2> -->
-  <!-- } -->
+  } @placeholder {
+    <h2 class="standards__title global-block-title" i18n>
+      Дотримування стандартів
+    </h2>
+  }
 </div>
