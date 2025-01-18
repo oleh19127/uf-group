@@ -16,19 +16,19 @@
     <div class="row">
       <div class="col-12">
         <div class="how-to-find__map">
-          <!-- @defer (on viewport) { -->
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.352723932859!2d24.685320776868927!3d48.90867169716619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c130e7dacead%3A0x33facf23b3ccd574!2z0LLRg9C70LjRhtGPINCT0LXRgtGM0LzQsNC90LAg0JzQsNC30LXQv9C4LCAxNjMsINCG0LLQsNC90L4t0KTRgNCw0L3QutGW0LLRgdGM0LosINCG0LLQsNC90L4t0KTRgNCw0L3QutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzYwMDA!5e0!3m2!1sru!2sua!4v1714146043184!5m2!1sru!2sua"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Google Map"
-          ></iframe>
-          <!-- } @placeholder { -->
-          <!-- <h2 class="how-to-find__title global-block-title" i18n> -->
-          <!-- Гугл карта -->
-          <!-- </h2> -->
-          <!-- } -->
+          @defer (hydrate on viewport) {
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.352723932859!2d24.685320776868927!3d48.90867169716619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c130e7dacead%3A0x33facf23b3ccd574!2z0LLRg9C70LjRhtGPINCT0LXRgtGM0LzQsNC90LAg0JzQsNC30LXQv9C4LCAxNjMsINCG0LLQsNC90L4t0KTRgNCw0L3QutGW0LLRgdGM0LosINCG0LLQsNC90L4t0KTRgNCw0L3QutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzYwMDA!5e0!3m2!1sru!2sua!4v1714146043184!5m2!1sru!2sua"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Map"
+            ></iframe>
+          } @placeholder {
+            <h2 class="how-to-find__title global-block-title" i18n>
+              Гугл карта
+            </h2>
+          }
         </div>
       </div>
     </div>

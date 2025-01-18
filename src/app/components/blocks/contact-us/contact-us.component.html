@@ -12,96 +12,97 @@
       </div>
     </div>
   </div>
-  <!-- @defer (on idle) { -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <div class="contact-us__bg">
-          <app-progressive-image
-            class="contact-us-bg-image"
-            imageUrl="contact-us/contact-us-bg.jpg"
-            imagePriority="false"
-            imageAlt="contact-us-bg"
-            imageFill="true"
-          ></app-progressive-image>
-          <div class="contact-us__form contact-us-form">
-            <div class="contact-us-form__container contact-us-form-container">
-              <form action="">
-                <input type="text" i18n placeholder="П.І.П." />
-                <input type="text" i18n placeholder="Номер телефону" />
-                <textarea
-                  i18n
-                  placeholder="Прорахунок? (Pобиться в міліметрах)"
-                ></textarea>
-                <button type="submit" i18n>Отримати прорахунок</button>
-              </form>
-              <div
-                class="contact-us-form-container__social contact-us-form-container-social"
-              >
-                <div class="contact-us-form-container-social__title" i18n>
-                  Зв’язатись самому:
-                </div>
+  @defer (hydrate on viewport) {
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="contact-us__bg">
+            <app-progressive-image
+              class="contact-us-bg-image"
+              imageUrl="contact-us/contact-us-bg.jpg"
+              imagePriority="false"
+              imageAlt="contact-us-bg"
+              imageFill="true"
+            ></app-progressive-image>
+            <div class="contact-us__form contact-us-form">
+              <div class="contact-us-form__container contact-us-form-container">
+                <form action="">
+                  <input type="text" i18n placeholder="П.І.П." />
+                  <input type="text" i18n placeholder="Номер телефону" />
+                  <textarea
+                    i18n
+                    placeholder="Прорахунок? (Pобиться в міліметрах)"
+                  ></textarea>
+                  <button type="submit" i18n>Отримати прорахунок</button>
+                </form>
                 <div
-                  class="contact-us-form-container-social__info contact-us-form-container-social-info"
+                  class="contact-us-form-container__social contact-us-form-container-social"
                 >
+                  <div class="contact-us-form-container-social__title" i18n>
+                    Зв’язатись самому:
+                  </div>
                   <div
-                    class="contact-us-form-container-social-info__text contact-us-form-container-social-info-text"
+                    class="contact-us-form-container-social__info contact-us-form-container-social-info"
                   >
                     <div
-                      class="contact-us-form-container-social-info-text__phone"
+                      class="contact-us-form-container-social-info__text contact-us-form-container-social-info-text"
                     >
-                      <span i18n>Контакти:</span>
-                      <a href="tel:+380960056863">(096)-005-68-63</a>
-                    </div>
-                    <div
-                      class="contact-us-form-container-social-info-text__email"
-                    >
-                      <span>Email:</span>
-                      <a href="mailto:uf.group.ua&#64;gmail.com"
-                        >uf.group.ua&#64;gmail.com</a
+                      <div
+                        class="contact-us-form-container-social-info-text__phone"
                       >
+                        <span i18n>Контакти:</span>
+                        <a href="tel:+380960056863">(096)-005-68-63</a>
+                      </div>
+                      <div
+                        class="contact-us-form-container-social-info-text__email"
+                      >
+                        <span>Email:</span>
+                        <a href="mailto:uf.group.ua&#64;gmail.com"
+                          >uf.group.ua&#64;gmail.com</a
+                        >
+                      </div>
                     </div>
-                  </div>
-                  <div class="contact-us-form-container-social-info__icons">
-                    <a href="tg://resolve?domain=+380960056863">
-                      <div class="icon-img">
-                        <app-progressive-image
-                          imageUrl="contact-us/telegram-dark-theme.svg"
-                          imagePriority="false"
-                          imageAlt="telegram"
-                          imageHeight="54"
-                          imageWidth="54"
-                          imageFill="false"
-                        ></app-progressive-image>
-                      </div>
-                    </a>
-                    <a href="viber://chat?number=+380960056863">
-                      <div class="icon-img">
-                        <app-progressive-image
-                          imageUrl="contact-us/viber-dark-theme.svg"
-                          imagePriority="false"
-                          imageAlt="viber"
-                          imageHeight="54"
-                          imageWidth="54"
-                          imageFill="false"
-                        ></app-progressive-image>
-                      </div>
-                    </a>
-                    <a
-                      href="https://www.instagram.com/elitfasad/"
-                      target="_blank"
-                    >
-                      <div class="icon-img">
-                        <app-progressive-image
-                          imageUrl="contact-us/instagram-dark-theme.svg"
-                          imagePriority="false"
-                          imageAlt="instagram"
-                          imageHeight="54"
-                          imageWidth="54"
-                          imageFill="false"
-                        ></app-progressive-image>
-                      </div>
-                    </a>
+                    <div class="contact-us-form-container-social-info__icons">
+                      <a href="tg://resolve?domain=+380960056863">
+                        <div class="icon-img">
+                          <app-progressive-image
+                            imageUrl="contact-us/telegram-dark-theme.svg"
+                            imagePriority="false"
+                            imageAlt="telegram"
+                            imageHeight="54"
+                            imageWidth="54"
+                            imageFill="false"
+                          ></app-progressive-image>
+                        </div>
+                      </a>
+                      <a href="viber://chat?number=+380960056863">
+                        <div class="icon-img">
+                          <app-progressive-image
+                            imageUrl="contact-us/viber-dark-theme.svg"
+                            imagePriority="false"
+                            imageAlt="viber"
+                            imageHeight="54"
+                            imageWidth="54"
+                            imageFill="false"
+                          ></app-progressive-image>
+                        </div>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/elitfasad/"
+                        target="_blank"
+                      >
+                        <div class="icon-img">
+                          <app-progressive-image
+                            imageUrl="contact-us/instagram-dark-theme.svg"
+                            imagePriority="false"
+                            imageAlt="instagram"
+                            imageHeight="54"
+                            imageWidth="54"
+                            imageFill="false"
+                          ></app-progressive-image>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -110,8 +111,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- } @placeholder { -->
-  <!-- <h2 class="contact-us__title global-block-title" i18n>Зв'язатись з нами</h2> -->
-  <!-- } -->
+  } @placeholder {
+    <h2 class="contact-us__title global-block-title" i18n>Зв'язатись з нами</h2>
+  }
 </div>
