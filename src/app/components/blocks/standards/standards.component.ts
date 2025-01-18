@@ -7,7 +7,7 @@ import { NgClass } from '@angular/common';
   selector: 'app-standards',
   imports: [ProgressiveImageComponent, NgClass],
   templateUrl: './standards.component.html',
-  styleUrl: './standards.component.scss',
+  styleUrls: ['./standards.component.scss'],
 })
 export class StandardsComponent {
   themeService: ThemeService = inject(ThemeService);

@@ -1,10 +1,10 @@
 <div class="app">
-  @defer {
-    <app-header></app-header>
-    <div [@routeAnimations]="getRouteAnimationData()">
-      <router-outlet></router-outlet>
-    </div>
-  } @loading (minimum 300ms) {
-    <app-preloader></app-preloader>
-  }
+  <!-- @defer { -->
+  <app-header></app-header>
+  <div [@routeAnimations]="getRouteAnimationData()">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- } @loading (minimum 300ms) { -->
+  <!-- <app-preloader></app-preloader> -->
+  <!-- } -->
 </div>

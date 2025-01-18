@@ -15,7 +15,7 @@ import { ThemeService } from '../../../services/theme.service';
   selector: 'app-header',
   imports: [RouterLink, RouterLinkActive, ProgressiveImageComponent, NgClass],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   bodyClass = 'lock';

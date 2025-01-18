@@ -8,7 +8,7 @@ import { ThemeService } from '../../../services/theme.service';
   selector: 'app-footer',
   imports: [ProgressiveImageComponent, RouterLink, NgClass],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
   themeService: ThemeService = inject(ThemeService);

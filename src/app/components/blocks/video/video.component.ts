@@ -7,7 +7,7 @@ import { NgClass } from '@angular/common';
   selector: 'app-video',
   imports: [YouTubePlayer, NgClass],
   templateUrl: './video.component.html',
-  styleUrl: './video.component.scss',
+  styleUrls: ['./video.component.scss'],
 })
 export class VideoComponent {
   themeService: ThemeService = inject(ThemeService);
